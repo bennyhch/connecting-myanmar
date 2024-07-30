@@ -1,32 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+
+const NavLink = ({ href, children, menuItem }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  return (
+    <li
+      onMouseEnter={() => setIsMenuOpen(true)}
+      onMouseLeave={() => setIsMenuOpen(false)}
+    >
+      {/* <a href={href} className="hover:underline "> */}
+      <a
+        href={href}
+        className="hover:underline focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center"
+      >
+        {children}
+        {isMenuOpen && menuItem && (
+          <ul className="flex flex-col">
+            <li>Dashboard</li>
+            <li>Settings</li>
+            <li>Earnings</li>
+            <li>Sign out</li>
+          </ul>
+        )}
+      </a>
+    </li>
+  );
+};
 
 const Navbar = () => {
   return (
-    <nav class="relative px-4 py-4 flex justify-between items-center bg-white">
-      <ul class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
-        <li>
-          <a class="leading-none" href="/">
-            HOME
-          </a>
-        </li>
-        <li>
-          <a href="/about">ABOUT</a>
-        </li>
-        <li>
-          <a href="/scholarship">SCHOLARSHIP</a>
-        </li>
-        <li>
-          <a href="/aid">HUMANITARIAN AID</a>
-        </li>
-        <li>
-          <a href="/donate">DONATE</a>
-        </li>
-        <li>
-          <a href="/art">ART</a>
-        </li>
-        <li>
-          <a href="/faqs">FAQS</a>
-        </li>
+    <nav className="py-3" style={{ border: "1px solid red" }}>
+      <ul className="flex justify-center gap-x-10">
+        <NavLink href="/">HOME</NavLink>
+        <NavLink href="/about">ABOUT</NavLink>
+        <NavLink href="/scholarship">SCHOLARSHIP</NavLink>
+        <NavLink href="/aid">HUMANITARIAN AID</NavLink>
+        <NavLink href="/donate">DONATE</NavLink>
+        <NavLink href="/art">ART</NavLink>
+        <NavLink href="/faqs">FAQS</NavLink>
       </ul>
     </nav>
   );
