@@ -35,7 +35,7 @@ function App() {
           <Route path="contact-us" element={<ContactUs />} />
 
           {/* Scholarship */}
-          <Route path="partrons" element={<Patrons />} />
+          <Route path="patrons" element={<Patrons />} />
           <Route path="our-scholars" element={<OurScholars />} />
 
           {/* Scholars */}

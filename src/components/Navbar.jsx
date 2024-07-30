@@ -6,8 +6,15 @@ import Structure from "../pages/Structure";
 import ContactUs from "../pages/ContactUs";
 
 // menu items for navbar
-const scholarshipMenuItems = [OurScholars, Patrons];
-const aboutMenuItems = [Programmes, Structure, ContactUs];
+const scholarshipMenuItems = [
+  { href: "our-scholars", component: OurScholars },
+  { href: "patrons", component: Patrons },
+];
+const aboutMenuItems = [
+  { href: "programmes", component: Programmes },
+  { href: "structure", component: Structure },
+  { href: "contact-us", component: ContactUs },
+];
 
 const NavLink = ({ href, children, menuItems }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,17 +30,18 @@ const NavLink = ({ href, children, menuItems }) => {
         className="hover:underline focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center"
       >
         {children}
-        {isMenuOpen && menuItems && (
-          <ul className="flex flex-col">
-            {menuItems.map((Component, index) => (
-              <li key={index}>
-                {/* <a></a> */}
-                <Component />
-              </li>
-            ))}
-          </ul>
-        )}
       </a>
+      {isMenuOpen && menuItems && (
+        <ul className="flex flex-col">
+          {menuItems.map((item, index) => (
+            <li key={index}>
+              <a href={item.href}>
+                <item.component />
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </li>
   );
 };
