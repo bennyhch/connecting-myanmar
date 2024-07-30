@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import OurScholars from "../pages/OurScholars";
 import Patrons from "../pages/Patrons";
 import Programmes from "../pages/Programmes";
@@ -17,13 +17,8 @@ const aboutMenuItems = [
 ];
 
 const NavLink = ({ href, children, menuItems }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
   return (
-    <li
-      onMouseEnter={() => setIsMenuOpen(true)}
-      onMouseLeave={() => setIsMenuOpen(false)}
-    >
+    <li className="relative group">
       {/* <a href={href} className="hover:underline "> */}
       <a
         href={href}
@@ -31,16 +26,21 @@ const NavLink = ({ href, children, menuItems }) => {
       >
         {children}
       </a>
-      {isMenuOpen && menuItems && (
-        <ul className="flex flex-col">
-          {menuItems.map((item, index) => (
-            <li key={index}>
-              <a href={item.href}>
-                <item.component />
-              </a>
-            </li>
-          ))}
-        </ul>
+      {menuItems && (
+        <div className="absolute left-0 mt-2 z-10 overflow-hidden transition-all duration-300 transform scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100 origin-top bg-white border rounded-lg shadow-lg">
+          <ul className="flex flex-col">
+            {menuItems.map((item, index) => (
+              <li key={index} className="border-b last:border-0">
+                <a
+                  href={item.href}
+                  className="block px-4 py-3 hover:bg-gray-200"
+                >
+                  <item.component />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       )}
     </li>
   );
@@ -48,7 +48,7 @@ const NavLink = ({ href, children, menuItems }) => {
 
 const Navbar = () => {
   return (
-    <nav className="py-3" style={{ border: "1px solid red" }}>
+    <nav className="py-3">
       <ul className="flex justify-center gap-x-10">
         <NavLink href="/">HOME</NavLink>
         <NavLink href="/about" menuItems={aboutMenuItems}>
