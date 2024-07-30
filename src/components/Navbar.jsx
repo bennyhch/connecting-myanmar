@@ -1,6 +1,15 @@
 import React, { useState } from "react";
+import OurScholars from "../pages/OurScholars";
+import Patrons from "../pages/Patrons";
+import Programmes from "../pages/Programmes";
+import Structure from "../pages/Structure";
+import ContactUs from "../pages/ContactUs";
 
-const NavLink = ({ href, children, menuItem }) => {
+// menu items for navbar
+const scholarshipMenuItems = [OurScholars, Patrons];
+const aboutMenuItems = [Programmes, Structure, ContactUs];
+
+const NavLink = ({ href, children, menuItems }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -14,12 +23,14 @@ const NavLink = ({ href, children, menuItem }) => {
         className="hover:underline focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center"
       >
         {children}
-        {isMenuOpen && menuItem && (
+        {isMenuOpen && menuItems && (
           <ul className="flex flex-col">
-            <li>Dashboard</li>
-            <li>Settings</li>
-            <li>Earnings</li>
-            <li>Sign out</li>
+            {menuItems.map((Component, index) => (
+              <li key={index}>
+                {/* <a></a> */}
+                <Component />
+              </li>
+            ))}
           </ul>
         )}
       </a>
@@ -32,8 +43,12 @@ const Navbar = () => {
     <nav className="py-3" style={{ border: "1px solid red" }}>
       <ul className="flex justify-center gap-x-10">
         <NavLink href="/">HOME</NavLink>
-        <NavLink href="/about">ABOUT</NavLink>
-        <NavLink href="/scholarship">SCHOLARSHIP</NavLink>
+        <NavLink href="/about" menuItems={aboutMenuItems}>
+          ABOUT
+        </NavLink>
+        <NavLink href="/scholarship" menuItems={scholarshipMenuItems}>
+          SCHOLARSHIP
+        </NavLink>
         <NavLink href="/aid">HUMANITARIAN AID</NavLink>
         <NavLink href="/donate">DONATE</NavLink>
         <NavLink href="/art">ART</NavLink>

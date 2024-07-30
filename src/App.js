@@ -8,6 +8,11 @@ import Aid from "./pages/Aid";
 import Donate from "./pages/Donate";
 import Art from "./pages/Art";
 import Faqs from "./pages/Faqs";
+import Programmes from "./pages/Programmes";
+import Structure from "./pages/Structure";
+import ContactUs from "./pages/ContactUs";
+import Patrons from "./pages/Patrons";
+import OurScholars from "./pages/OurScholars";
 
 import Dingo from "./pages/scholars/Dingo";
 
@@ -23,6 +28,15 @@ function App() {
           <Route path="/donate" element={<Donate />} />
           <Route path="/art" element={<Art />} />
           <Route path="/faqs" element={<Faqs />} />
+
+          {/* About */}
+          <Route path="programmes" element={<Programmes />} />
+          <Route path="structure" element={<Structure />} />
+          <Route path="contact-us" element={<ContactUs />} />
+
+          {/* Scholarship */}
+          <Route path="partrons" element={<Patrons />} />
+          <Route path="our-scholars" element={<OurScholars />} />
 
           {/* Scholars */}
           <Route path="/dingo" element={<Dingo />} />
