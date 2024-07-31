@@ -16,11 +16,12 @@ const aboutMenuItems = [
   { href: "contact-us", component: ContactUs },
 ];
 
-const NavLink = ({ href, text, menuItems }) => {
+const NavLink = ({ href, text, menuItems, newTab }) => {
   return (
     <li className="relative group">
-      {/* <a href={href} className="hover:underline "> */}
       <a
+        target={newTab && "_blank"}
+        rel={newTab && "noreferrer"}
         href={href}
         className="hover:underline focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center"
       >
@@ -59,7 +60,11 @@ const Navbar = () => {
         />
         <NavLink href="/aid" text="HUMANITARIAN AID" />
         <NavLink href="/donate" text="DONATE" />
-        <NavLink href="/art" text="ART" />
+        <NavLink
+          href="https://www.artsy.net/partner/connecting-myanmar"
+          text="ART"
+          newTab
+        />
         <NavLink href="/faqs" text="FAQS" />
       </ul>
     </nav>
