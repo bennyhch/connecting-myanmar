@@ -28,13 +28,13 @@ function App() {
           <Route path="/faqs" element={<Faqs />} />
 
           {/* About */}
-          <Route path="programmes" element={<Programmes />} />
-          <Route path="structure" element={<Structure />} />
-          <Route path="contact-us" element={<ContactUs />} />
+          <Route path="/programmes" element={<Programmes />} />
+          <Route path="/structure" element={<Structure />} />
+          <Route path="/contact-us" element={<ContactUs />} />
 
           {/* Scholarship */}
-          <Route path="patrons" element={<Patrons />} />
-          <Route path="our-scholars" element={<OurScholars />} />
+          <Route path="/patrons" element={<Patrons />} />
+          <Route path="/our-scholars" element={<OurScholars />} />
 
           {/* Scholars */}
           <Route path="/dingo" element={<Dingo />} />
