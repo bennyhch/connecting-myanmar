@@ -1,12 +1,26 @@
 import React from "react";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+
 import Button from "../components/Button";
 import Divider from "../components/Divider";
 import RoundButton from "../components/RoundButton";
 
 const sectionWrapper = "max-w-xl w-full mx-auto my-50";
+const shadingStyles = "absolute inset-0 bg-black opacity-70";
+const buttonsContainer = "mt-8 w-1/2 flex justify-around";
 
 const Heading = ({ text, textColor }) => {
   return <h2 className={`${textColor} font-bold mb-5 text-2xl`}>{text}</h2>;
+};
+
+const IconLink = ({ link, icon }) => {
+  return (
+    <a href={link} target="_blank" rel="noreferrer">
+      {icon}
+    </a>
+  );
 };
 
 const Home = () => {
@@ -60,14 +74,15 @@ const Home = () => {
 
       <footer className="h-70lvh mt-8">
         <div className="bg-[url('/src/assets/footer.jpg')] h-full bg-cover bg-center relative">
-          <div className="absolute inset-0 bg-black opacity-70"></div>
-          <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center space-y-4">
+          <div className={shadingStyles}></div>
+          <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center space-y-10">
             <p className="w-1/2">
               All profit from the artwork sale goes to support our scholarship
               program, sending ​Myanmar students to Universities. Visit us on
               Artsy:
             </p>
-            <div className="mt-8 w-1/2 flex justify-around">
+
+            <div className={buttonsContainer}>
               <RoundButton
                 link="https://www.artsy.net/partner/connecting-myanmar"
                 text="ARTSY"
@@ -78,6 +93,21 @@ const Home = () => {
                 link="/donate"
                 text="DONATE NOW"
                 color="bg-customGreen"
+              />
+            </div>
+
+            <div className={buttonsContainer}>
+              <IconLink
+                link="https://www.facebook.com/ConnectingMyanmar/"
+                icon={<FaFacebook />}
+              />
+              <IconLink
+                link="https://www.instagram.com/connectingmyanmar"
+                icon={<FaInstagram />}
+              />
+              <IconLink
+                link="mailto: info@connectingmyanmar.org"
+                icon={<AiOutlineMail />}
               />
             </div>
           </div>

@@ -10,7 +10,7 @@ const RoundButton = ({ text, color, link, newTab }) => {
           "rel=noopener noreferrer"
         )
       }
-      className={`p-4 px-10 rounded-full ${color} w-60 hover:brightness-75`}
+      className={`p-4 px-10 rounded ${color} w-60 hover:brightness-75`}
     >
       {text}
     </button>
