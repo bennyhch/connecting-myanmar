@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import logo from "./assets/logo.png";
 import styled from "styled-components";
+import Divider from "./components/Divider";
 
 const LogoContainer = styled.div`
   display: flex;
@@ -26,7 +27,7 @@ const Layout = () => {
         <LogoContainer>
           <LogoImage src={logo} alt="logo" />
         </LogoContainer>
-        <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700" />
+        <Divider />
         <Navbar />
       </header>
       <main>
