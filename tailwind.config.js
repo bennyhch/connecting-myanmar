@@ -9,6 +9,10 @@ module.exports = {
       height: {
         "70lvh": "70lvh",
       },
+      colors: {
+        customGod: "#b08c2c",
+        customGreen: "#70bc3c",
+      },
     },
   },
   plugins: [],
