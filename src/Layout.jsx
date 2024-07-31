@@ -7,7 +7,7 @@ import styled from "styled-components";
 const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   width: 100%;
   height: 15vh;
 `;
@@ -26,6 +26,7 @@ const Layout = () => {
         <LogoContainer>
           <LogoImage src={logo} alt="logo" />
         </LogoContainer>
+        <hr className="h-px my-1 bg-gray-200 border-0 dark:bg-gray-700" />
         <Navbar />
       </header>
       <main>
