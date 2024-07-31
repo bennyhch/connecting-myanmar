@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import OurScholars from "../pages/OurScholars";
 import Patrons from "../pages/Patrons";
 import Programmes from "../pages/Programmes";
@@ -7,37 +9,37 @@ import ContactUs from "../pages/ContactUs";
 
 // menu items for navbar
 const scholarshipMenuItems = [
-  { href: "our-scholars", component: OurScholars },
-  { href: "patrons", component: Patrons },
+  { href: "our-scholars", component: () => OurScholars, text: "Our Scholars" },
+  { href: "patrons", component: () => Patrons, text: "Patrons" },
 ];
 const aboutMenuItems = [
-  { href: "programmes", component: Programmes },
-  { href: "structure", component: Structure },
-  { href: "contact-us", component: ContactUs },
+  { href: "programmes", component: () => Programmes, text: "Programmes" },
+  { href: "structure", component: () => Structure, text: "Structure" },
+  { href: "contact-us", component: () => ContactUs, text: "Contact Us" },
 ];
 
 const NavLink = ({ href, text, menuItems, newTab }) => {
   return (
     <li className="relative group">
-      <a
-        target={newTab && "_blank"}
-        rel={newTab && "noreferrer"}
-        href={href}
+      <Link
+        to={href}
+        target={newTab ? "_blank" : "_self"}
+        rel={newTab ? "noreferrer" : ""}
         className="hover:underline focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center"
       >
         {text}
-      </a>
+      </Link>
       {menuItems && (
         <div className="absolute left-0 mt-2 z-10 overflow-hidden transition-all duration-300 transform scale-y-0 opacity-0 group-hover:scale-y-100 group-hover:opacity-100 origin-top bg-white border rounded-lg shadow-lg">
           <ul className="flex flex-col">
             {menuItems.map((item, index) => (
               <li key={index} className="border-b last:border-0">
-                <a
-                  href={item.href}
+                <Link
+                  to={item.href}
                   className="block px-4 py-3 hover:bg-gray-200"
                 >
-                  <item.component />
-                </a>
+                  {item.text}
+                </Link>
               </li>
             ))}
           </ul>
