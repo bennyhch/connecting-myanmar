@@ -10,7 +10,7 @@ module.exports = {
         "70lvh": "70lvh",
       },
       colors: {
-        customGod: "#b08c2c",
+        customGold: "#b08c2c",
         customGreen: "#70bc3c",
       },
     },
