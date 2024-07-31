@@ -1,11 +1,11 @@
 import React from "react";
+import { HeaderWrapper, SectionHeading } from "../utils/wrappers";
+
 import {
-  HeaderWrapper,
   headingBackgroundImageStyles,
   headingTextStyles,
-  SectionHeading,
   sectionWrapperStyles,
-} from "../utils/header";
+} from "../utils/classStyles";
 
 const About = () => {
   return (

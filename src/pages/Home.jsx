@@ -7,16 +7,16 @@ import Button from "../components/Button";
 import Divider from "../components/Divider";
 import RoundButton from "../components/RoundButton";
 
+import { HeaderWrapper, SectionHeading } from "../utils/wrappers";
+
 import {
-  HeaderWrapper,
-  SectionHeading,
   headingBackgroundImageStyles,
   headingTextStyles,
   sectionWrapperStyles,
-} from "../utils/header";
+  shadingStyles,
+} from "../utils/classStyles";
 
-const shadingStyles = "absolute inset-0 bg-black opacity-70";
-const buttonsContainer = "mt-8 w-1/2 flex justify-around";
+const buttonsContainerStyles = "mt-8 w-1/2 flex justify-around";
 
 const IconLink = ({ link, icon }) => {
   return (
@@ -93,7 +93,7 @@ const Home = () => {
               Artsy:
             </p>
 
-            <div className={buttonsContainer}>
+            <div className={buttonsContainerStyles}>
               <RoundButton
                 link="https://www.artsy.net/partner/connecting-myanmar"
                 text="ARTSY"
@@ -107,7 +107,7 @@ const Home = () => {
               />
             </div>
 
-            <div className={buttonsContainer}>
+            <div className={buttonsContainerStyles}>
               <IconLink
                 link="https://www.facebook.com/ConnectingMyanmar/"
                 icon={<FaFacebook />}

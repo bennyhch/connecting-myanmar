@@ -1,12 +1,6 @@
-export const HeaderWrapper = ({ children }) => {
-  return <header className="relative h-70lvh">{children}</header>;
-};
-
-export const SectionHeading = ({ text, textColor }) => {
-  return <h2 className={`${textColor} font-bold mb-5 text-2xl`}>{text}</h2>;
-};
-
 export const sectionWrapperStyles = "max-w-xl w-full mx-auto my-50";
+
+export const shadingStyles = "absolute inset-0 bg-black opacity-70";
 
 export const headingBackgroundImageStyles =
   "absolute inset-0 h-full bg-cover bg-center text-black blur-sm";
