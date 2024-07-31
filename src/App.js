@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Scholarship from "./pages/Scholarship";
 import Aid from "./pages/Aid";
 import Donate from "./pages/Donate";
-import Art from "./pages/Art";
 import Faqs from "./pages/Faqs";
 import Programmes from "./pages/Programmes";
 import Structure from "./pages/Structure";
@@ -26,7 +25,6 @@ function App() {
           <Route path="/scholarship" element={<Scholarship />} />
           <Route path="/aid" element={<Aid />} />
           <Route path="/donate" element={<Donate />} />
-          <Route path="/art" element={<Art />} />
           <Route path="/faqs" element={<Faqs />} />
 
           {/* About */}
