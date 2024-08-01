@@ -9,13 +9,13 @@ import ContactUs from "../pages/ContactUs";
 
 // menu items for navbar
 const scholarshipMenuItems = [
-  { href: "our-scholars", component: () => OurScholars, text: "Our Scholars" },
-  { href: "patrons", component: () => Patrons, text: "Patrons" },
+  { href: "patrons", component: () => Patrons, text: "BECOMING A PATRON" },
+  { href: "our-scholars", component: () => OurScholars, text: "OUR SCHOLARS" },
 ];
 const aboutMenuItems = [
-  { href: "programmes", component: () => Programmes, text: "Programmes" },
-  { href: "structure", component: () => Structure, text: "Structure" },
-  { href: "contact-us", component: () => ContactUs, text: "Contact Us" },
+  { href: "programmes", component: () => Programmes, text: "PROGRAMMES" },
+  { href: "structure", component: () => Structure, text: "STRUCTURE" },
+  { href: "contact-us", component: () => ContactUs, text: "CONTACT US" },
 ];
 
 const NavLink = ({ href, text, menuItems, newTab }) => {
