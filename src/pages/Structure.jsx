@@ -1,23 +1,17 @@
 import React from "react";
-import { HeaderWrapper, SectionHeading } from "../utils/wrappers";
-import {
-  headingBackgroundImageStyles,
-  headingTextStyles,
-  shading50Styles,
-} from "../utils/classStyles";
+import { SectionHeading } from "../utils/wrappers";
+
+import HeaderImageWrapper from "../components/HeaderImage";
 
 const Structure = () => {
   return (
     <div>
-      <HeaderWrapper>
-        <div
-          className={`bg-[url('/src/assets/structure.jpg')] ${headingBackgroundImageStyles}`}
-        ></div>
-        <div className={shading50Styles}></div>
-        <p className={headingTextStyles}>
-          ORGANIZATIONAL <span className="text-customGreen">STRUCTURE</span>
-        </p>
-      </HeaderWrapper>
+      <HeaderImageWrapper
+        imgUrl="bg-[url('/src/assets/structure.jpg')]"
+        isShading
+      >
+        ORGANIZATIONAL <span className="text-customGreen">STRUCTURE</span>
+      </HeaderImageWrapper>
 
       <main className="w-full text-justify">
         <section className="max-w-5xl w-full mx-auto my-50 mt-14">

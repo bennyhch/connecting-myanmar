@@ -8,7 +8,7 @@ module.exports = {
       },
       height: {
         "50lvh": "50lvh",
-        "70lvh": "70lvh",
+        "70lvh": "70lvh", // TODO: Remove this if not used
       },
       colors: {
         customGold: "#b08c2c",

@@ -1,25 +1,17 @@
 import React from "react";
-import { HeaderWrapper, SectionHeading } from "../utils/wrappers";
+import { SectionHeading } from "../utils/wrappers";
 
-import {
-  headingBackgroundImageStyles,
-  headingTextStyles,
-  sectionWrapperStyles,
-} from "../utils/classStyles";
+import { sectionWrapperStyles } from "../utils/classStyles";
+import HeaderImageWrapper from "../components/HeaderImage";
 
 const About = () => {
   return (
     <div>
-      <HeaderWrapper>
-        <div
-          className={`bg-[url('/src/assets/about.jpg')] ${headingBackgroundImageStyles}`}
-        ></div>
-        <p className={headingTextStyles}>
-          AN EMPATHETIC WORLD WHERE EVERYONE HAS THE{" "}
-          <span className="text-customGreen">EQUAL OPPORTUNITY</span> TO REALISE
-          ​THEIR POTENTIALS AND ASPIRATIONS.
-        </p>
-      </HeaderWrapper>
+      <HeaderImageWrapper imgUrl="bg-[url('/src/assets/about.jpg')]">
+        AN EMPATHETIC WORLD WHERE EVERYONE HAS THE{" "}
+        <span className="text-customGreen">EQUAL OPPORTUNITY</span> TO REALISE
+        ​THEIR POTENTIALS AND ASPIRATIONS.
+      </HeaderImageWrapper>
 
       <main className="w-full text-justify">
         <section className={`${sectionWrapperStyles} mt-14`}>

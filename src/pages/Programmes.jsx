@@ -1,15 +1,10 @@
 import React from "react";
-import { HeaderWrapper, SectionHeading } from "../utils/wrappers";
-
-import {
-  headingBackgroundImageStyles,
-  headingTextStyles,
-  shading50Styles,
-} from "../utils/classStyles";
+import { SectionHeading } from "../utils/wrappers";
 
 import streetLawOne from "../assets/street-law-1.jpg";
 import streetLawTwo from "../assets/street-law-2.jpg";
 import streetLawThree from "../assets/street-law-3.jpg";
+import HeaderImageWrapper from "../components/HeaderImage";
 
 const ImageContainer = ({ children }) => {
   return <div className="w-full max-w-80">{children}</div>;
@@ -18,19 +13,15 @@ const ImageContainer = ({ children }) => {
 const Programmes = () => {
   return (
     <div>
-      <HeaderWrapper>
-        <div
-          className={`bg-[url('/src/assets/programmes.jpg')] ${headingBackgroundImageStyles}`}
-        ></div>
-        <div className={shading50Styles}></div>
-        <p className={headingTextStyles}>
-          WE PROVIDE A PLATFORM FOR{" "}
-          <span className="text-customGreen">KNOWLEDGE EXCHANGE</span>, SUPPORT
-          STUDENTS TO PURSUE THEIR SOCIAL CALLING AND ​HELP CREATE AN EMPATHETIC
-          WORLD.
-        </p>
-      </HeaderWrapper>
-
+      <HeaderImageWrapper
+        isShading
+        imgUrl="bg-[url('/src/assets/programmes.jpg')]"
+      >
+        WE PROVIDE A PLATFORM FOR{" "}
+        <span className="text-customGreen">KNOWLEDGE EXCHANGE</span>, SUPPORT
+        STUDENTS TO PURSUE THEIR SOCIAL CALLING AND ​HELP CREATE AN EMPATHETIC
+        WORLD.
+      </HeaderImageWrapper>
       <main className="w-full text-justify">
         <section className="max-w-5xl w-full mx-auto my-50 mt-14">
           <p className="text-lg mb-10">

@@ -2,21 +2,20 @@ import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
+import { FaLinkedin } from "react-icons/fa";
 
 import Button from "../components/Button";
 import Divider from "../components/Divider";
 import RoundButton from "../components/RoundButton";
 
-import { HeaderWrapper, SectionHeading } from "../utils/wrappers";
+import { SectionHeading } from "../utils/wrappers";
 
-import {
-  headingBackgroundImageStyles,
-  headingTextStyles,
-  sectionWrapperStyles,
-  shadingStyles,
-} from "../utils/classStyles";
+import { sectionWrapperStyles, shading50Styles } from "../utils/classStyles";
+import HeaderImageWrapper from "../components/HeaderImage";
 
 const buttonsContainerStyles = "mt-8 w-1/2 flex justify-around";
+
+// let iconStyles = { color: "green", fontSize: "1.5em" };
 
 const IconLink = ({ link, icon }) => {
   return (
@@ -29,17 +28,12 @@ const IconLink = ({ link, icon }) => {
 const Home = () => {
   return (
     <div>
-      <HeaderWrapper>
-        <div
-          className={`bg-[url('/src/assets/home-intro.jpg')] ${headingBackgroundImageStyles}`}
-        ></div>
-        <p className={headingTextStyles}>
-          WE ENVISION AN{" "}
-          <span className="text-customGreen">EMPATHETIC WORLD</span> WHERE
-          EVERYONE HAS THE ​EQUAL OPPORTUNITY TO ​REALIZE THEIR POTENTIAL AND
-          ASPIRATIONS
-        </p>
-      </HeaderWrapper>
+      <HeaderImageWrapper imgUrl="bg-[url('/src/assets/home-intro.jpg')]">
+        WE ENVISION AN{" "}
+        <span className="text-customGreen">EMPATHETIC WORLD</span> WHERE
+        EVERYONE HAS THE ​EQUAL OPPORTUNITY TO ​REALIZE THEIR POTENTIAL AND
+        ASPIRATIONS
+      </HeaderImageWrapper>
 
       <main className="flex justify-center items-center flex-col w-full text-justify">
         <section className={`${sectionWrapperStyles} mt-14`}>
@@ -85,7 +79,7 @@ const Home = () => {
 
       <footer className="h-70lvh mt-8">
         <div className="bg-[url('/src/assets/footer.jpg')] h-full bg-cover bg-center relative">
-          <div className={shadingStyles}></div>
+          <div className={shading50Styles}></div>
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center space-y-10">
             <p className="w-1/2">
               All profit from the artwork sale goes to support our scholarship
@@ -110,15 +104,19 @@ const Home = () => {
             <div className={buttonsContainerStyles}>
               <IconLink
                 link="https://www.facebook.com/ConnectingMyanmar/"
-                icon={<FaFacebook />}
+                icon={<FaFacebook size={20} />}
               />
               <IconLink
                 link="https://www.instagram.com/connectingmyanmar"
-                icon={<FaInstagram />}
+                icon={<FaInstagram size={20} color="#777C92" />}
+              />
+              <IconLink
+                link="https://www.linkedin.com/in/connectingmyanmar/"
+                icon={<FaLinkedin size={20} />}
               />
               <IconLink
                 link="mailto: info@connectingmyanmar.org"
-                icon={<AiOutlineMail />}
+                icon={<AiOutlineMail size={20} />}
               />
             </div>
           </div>
