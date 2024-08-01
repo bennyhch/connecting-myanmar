@@ -4,7 +4,7 @@ import { HeaderWrapper, SectionHeading } from "../utils/wrappers";
 import {
   headingBackgroundImageStyles,
   headingTextStyles,
-  shadingStyles,
+  shading50Styles,
 } from "../utils/classStyles";
 
 import streetLawOne from "../assets/street-law-1.jpg";
@@ -22,7 +22,7 @@ const Programmes = () => {
         <div
           className={`bg-[url('/src/assets/programmes.jpg')] ${headingBackgroundImageStyles}`}
         ></div>
-        <div className={shadingStyles}></div>
+        <div className={shading50Styles}></div>
         <p className={headingTextStyles}>
           WE PROVIDE A PLATFORM FOR{" "}
           <span className="text-customGreen">KNOWLEDGE EXCHANGE</span>, SUPPORT
@@ -32,7 +32,7 @@ const Programmes = () => {
       </HeaderWrapper>
 
       <main className="w-full text-justify">
-        <section className={`max-w-5xl w-full mx-auto my-50 mt-14`}>
+        <section className="max-w-5xl w-full mx-auto my-50 mt-14">
           <p className="text-lg mb-10">
             SINCE 2012, WE NOW HAVE OVER{" "}
             <span className="text-customBrown">250 VOLUNTEERS</span> FROM

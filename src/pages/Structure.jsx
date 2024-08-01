@@ -1,7 +1,54 @@
 import React from "react";
+import { HeaderWrapper, SectionHeading } from "../utils/wrappers";
+import {
+  headingBackgroundImageStyles,
+  headingTextStyles,
+  shading50Styles,
+} from "../utils/classStyles";
 
 const Structure = () => {
-  return <div>Structure</div>;
+  return (
+    <div>
+      <HeaderWrapper>
+        <div
+          className={`bg-[url('/src/assets/structure.jpg')] ${headingBackgroundImageStyles}`}
+        ></div>
+        <div className={shading50Styles}></div>
+        <p className={headingTextStyles}>
+          ORGANIZATIONAL <span className="text-customGreen">STRUCTURE</span>
+        </p>
+      </HeaderWrapper>
+
+      <main className="w-full text-justify">
+        <section className="max-w-5xl w-full mx-auto my-50 mt-14">
+          <SectionHeading
+            text="JOIN US TO BECOME A PART OF CM FAMILY!"
+            textColor="text-customGold"
+          />
+          <p>Connecting Myanmar completely relies on volunteers to function.</p>
+          <br />
+          <p>
+            We look for more volunteers who share our vision of having an
+            empathetic world where everyone has the equal opportunity to realise
+            their potential and aspirations. A volunteer at CM can contribute in
+            many ways - designing promotional materials, managing CM’s social
+            platforms (Instagram, Facebook, LinkedIn) and website, organizing
+            events (e.g. BBQ party, Art Jamming gathering), devising the
+            Scholarship Scheme, helping out with our annual art sale, and so
+            many more!{" "}
+          </p>
+          <br />
+          <p>
+            If you would like to learn more about who we are and what we do, we
+            encourage you to join our next gathering (to chat, eat, network -
+            super casual! :D). You may fill in the form at
+            https://forms.gle/UQa5F5tWVKiRwhSj7 and we will get in touch as soon
+            as we can!
+          </p>
+        </section>
+      </main>
+    </div>
+  );
 };
 
 export default Structure;
