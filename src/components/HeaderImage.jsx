@@ -1,10 +1,12 @@
 import React from "react";
 
-import {
-  headingBackgroundImageStyles,
-  headingTextStyles,
-  shading50Styles,
-} from "../utils/classStyles";
+import { shading50Styles } from "../utils/classStyles";
+
+const headingBackgroundImageStyles =
+  "absolute inset-0 h-full bg-cover bg-center text-black blur-sm";
+
+const headingTextStyles =
+  "text-xl leading-normal font-bold absolute text-white w-1/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2";
 
 const HeaderWrapper = ({ children }) => {
   return <header className="relative h-50lvh">{children}</header>;
