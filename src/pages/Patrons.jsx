@@ -1,7 +1,7 @@
 import React from "react";
 
 import HeaderImageWrapper from "../components/HeaderImage";
-import Button from "../components/Button";
+import NavButton from "../components/NavButton";
 import { SectionHeading } from "../utils/wrappers";
 
 import patronSteps from "../assets/patronSteps.png";
@@ -17,14 +17,7 @@ const TextContainer = ({ children, title }) => {
 };
 
 const ImageContainer = ({ children }) => {
-  return (
-    <div
-      className="flex-1 basis-full md:basis-1/2 "
-      // style={{ border: "1px solid blue" }}
-    >
-      {children}
-    </div>
-  );
+  return <div className="flex-1 basis-full md:basis-1/2 ">{children}</div>;
 };
 
 const Patrons = () => {
@@ -93,7 +86,7 @@ const Patrons = () => {
               <img src={patronCycle} alt="the life cycle of being a patron" />
             </ImageContainer>
           </article>
-          <Button link="/our-scholars" text="MEET OUR STUDENTS" />
+          <NavButton link="/our-scholars" text="MEET OUR STUDENTS" />
         </section>
       </main>
     </div>

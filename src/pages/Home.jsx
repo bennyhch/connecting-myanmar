@@ -4,7 +4,7 @@ import { FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import { FaLinkedin } from "react-icons/fa";
 
-import Button from "../components/Button";
+import NavButton from "../components/NavButton";
 import Divider from "../components/Divider";
 import RoundButton from "../components/RoundButton";
 
@@ -44,7 +44,7 @@ const Home = () => {
             exchange of skills and knowledge and to support them to take action
             towards positive change.
           </p>
-          <Button link="/about" text="LEARN MORE" />
+          <NavButton link="/about" text="LEARN MORE" />
           <Divider />
         </section>
 
@@ -58,7 +58,7 @@ const Home = () => {
             incubate their projects upon their graduation to benefit the broader
             community.
           </p>
-          <Button link="/patrons" text="LEARN MORE" />
+          <NavButton link="/patrons" text="LEARN MORE" />
           <Divider />
         </section>
 
@@ -73,7 +73,7 @@ const Home = () => {
             empathetic world. Our present programmes aim to pass on both legal
             ​and medical knowledge in Myanmar and on the Thai/ Myanmar border.
           </p>
-          <Button link="/programmes" text="LEARN MORE" />
+          <NavButton link="/programmes" text="LEARN MORE" />
         </section>
       </main>
 

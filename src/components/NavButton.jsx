@@ -5,7 +5,7 @@ const buttonBaseStyles = "border border-black p-3 px-4";
 const buttonHoverStyles =
   "transition duration-700 hover:bg-black hover:text-white";
 
-const Button = ({ link, text }) => {
+const NavButton = ({ link, text }) => {
   const navigate = useNavigate();
   return (
     <button
@@ -17,4 +17,4 @@ const Button = ({ link, text }) => {
   );
 };
 
-export default Button;
+export default NavButton;

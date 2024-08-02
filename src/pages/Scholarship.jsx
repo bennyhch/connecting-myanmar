@@ -1,7 +1,7 @@
 import React from "react";
 import { SectionHeading } from "../utils/wrappers";
 
-import Button from "../components/Button";
+import NavButton from "../components/NavButton";
 import HeaderImageWrapper from "../components/HeaderImage";
 
 const SubTitle = ({ title }) => {
@@ -54,7 +54,7 @@ const Scholarship = () => {
             in society.
           </p>
           <br />
-          <Button link="/patrons" text="BECOMING A PATRON" />
+          <NavButton link="/patrons" text="BECOMING A PATRON" />
         </section>
       </main>
     </div>
