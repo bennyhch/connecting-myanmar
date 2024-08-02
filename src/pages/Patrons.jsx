@@ -1,9 +1,11 @@
 import React from "react";
+
 import HeaderImageWrapper from "../components/HeaderImage";
+import Button from "../components/Button";
 import { SectionHeading } from "../utils/wrappers";
+
 import patronSteps from "../assets/patronSteps.png";
 import patronCycle from "../assets/patronCycle.png";
-import Button from "../components/Button";
 
 const TextContainer = ({ children, title }) => {
   return (
