@@ -14,6 +14,18 @@ import Patrons from "./pages/Patrons";
 import OurScholars from "./pages/OurScholars";
 
 import Dingo from "./pages/scholars/Dingo";
+import Satkyar from "./pages/scholars/Satkyar";
+import Blessing from "./pages/scholars/Blessing";
+import Deeku from "./pages/scholars/Deeku";
+import NayKawHtoo from "./pages/scholars/NayKawHtoo";
+import Tony from "./pages/scholars/Tony";
+import NayMin from "./pages/scholars/NayMin";
+import ThanHtikeZin from "./pages/scholars/ThanHtikeZin";
+import AungHtetOo from "./pages/scholars/AungHtetOo";
+import NyiNyiTun from "./pages/scholars/NyiNyiTun";
+import HtinLinZaw from "./pages/scholars/HtinLinZaw";
+import SawSiyar from "./pages/scholars/SawSiyar";
+import NaySoe from "./pages/scholars/NaySoe";
 
 function App() {
   return (
@@ -38,6 +50,18 @@ function App() {
 
           {/* Scholars */}
           <Route path="/dingo" element={<Dingo />} />
+          <Route path="/satkyar" element={<Satkyar />} />
+          <Route path="/blessing" element={<Blessing />} />
+          <Route path="/deeku" element={<Deeku />} />
+          <Route path="/naykawhtoo" element={<NayKawHtoo />} />
+          <Route path="/tony" element={<Tony />} />
+          <Route path="/naymin" element={<NayMin />} />
+          <Route path="/thanhtikezin" element={<ThanHtikeZin />} />
+          <Route path="/aunghtetoo" element={<AungHtetOo />} />
+          <Route path="/nyinyitun" element={<NyiNyiTun />} />
+          <Route path="/htinlinnzaw" element={<HtinLinZaw />} />
+          <Route path="/sawsiyar" element={<SawSiyar />} />
+          <Route path="/naysoe" element={<NaySoe />} />
         </Route>
       </Routes>
     </BrowserRouter>
