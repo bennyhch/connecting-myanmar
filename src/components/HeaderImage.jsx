@@ -17,7 +17,7 @@ const HeaderImageWrapper = ({ isShading, imgUrl, children }) => {
     <HeaderWrapper>
       <div className={`${imgUrl} ${headingBackgroundImageStyles}`}></div>
       {isShading && <div className={shading50Styles}></div>}
-      <p className={headingTextStyles}>{children}</p>
+      <div className={headingTextStyles}>{children}</div>
     </HeaderWrapper>
   );
 };
