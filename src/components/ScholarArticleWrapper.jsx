@@ -2,7 +2,7 @@ import React from "react";
 import { SectionHeading } from "../utils/wrappers";
 import NavButton from "./NavButton";
 
-const ScholarArticleWrapper = ({ name, chart, children }) => {
+const ScholarArticleWrapper = ({ name, chart, children, highlight }) => {
   return (
     <article className="w-full md:w-3/5 pr-14 pl-10">
       <SectionHeading
@@ -13,6 +13,13 @@ const ScholarArticleWrapper = ({ name, chart, children }) => {
         <div>
           <img src={chart} alt="chart" />
         </div>
+      )}
+      {highlight && (
+        <ul className="text-customGreen list-disc">
+          {highlight.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
       )}
       <br />
       {children}
