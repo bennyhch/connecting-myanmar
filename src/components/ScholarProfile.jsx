@@ -8,7 +8,7 @@ const List = ({ title, points }) => {
     <>
       <h4 className={subHeadingStyles}>{title}</h4>
       <ul className={listStyles}>
-        {points.map((point, index) => (
+        {points?.map((point, index) => (
           <li key={index}>{point}</li>
         ))}
       </ul>
@@ -51,7 +51,7 @@ const ScholarProfile = ({
       <br />
 
       <h4 className={subHeadingStyles}>Interesting facts about {name}</h4>
-      {facts.map((fact) => (
+      {facts?.map((fact) => (
         <>
           <p>{`Q: ${fact.question}`}</p>
           <p className="font-extralight">

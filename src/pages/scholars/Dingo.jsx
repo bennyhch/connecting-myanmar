@@ -140,7 +140,7 @@ const Dingo = () => {
           <ScholarProfile
             profilePicture={dingo}
             name="Dingo"
-            age={23}
+            age="23"
             ethnicity="Shan"
             placeOfBirth="Loikaw"
             programs={programs}
@@ -148,9 +148,6 @@ const Dingo = () => {
             facts={facts}
             images={images}
           />
-          {/* <div className="w-full md:w-2/5 p-10">
-            <NavButton text="I WANT BE DINGO'S PATRON" link="/donate" />
-          </div> */}
         </section>
       </main>
     </div>
