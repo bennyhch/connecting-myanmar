@@ -1,6 +1,6 @@
 import React from "react";
 
-import HeaderImageWrapper from "../../components/HeaderImage";
+import { ScholarHeader } from "../../components/HeaderImage";
 import ScholarProfile from "../../components/ScholarProfile";
 
 import dingoChart from "../../assets/scholars/dingo_chart.png";
@@ -37,14 +37,13 @@ const facts = [
 const Dingo = () => {
   return (
     <div>
-      <HeaderImageWrapper
+      <ScholarHeader
         isShading
         imgUrl="bg-[url('/src/assets/scholars/dingo.png')]"
-      >
-        <div className="text-3xl mb-5">DINGO</div>
-        <div className="text-customGreen">Business Management</div>{" "}
-        <div>University of the Thai Chamber of Commerce</div>
-      </HeaderImageWrapper>
+        name="Dingo"
+        program="Business Management"
+        university="University of the Thai Chamber of Commerce"
+      />
       <main className="w-full text-justify">
         <section className="max-w-5xl w-full mx-auto my-50 mt-14 flex flex-wrap">
           <ScholarArticleWrapper name="Dingo" chart={dingoChart}>

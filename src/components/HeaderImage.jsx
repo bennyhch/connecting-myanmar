@@ -23,3 +23,20 @@ const HeaderImageWrapper = ({ isShading, imgUrl, children }) => {
 };
 
 export default HeaderImageWrapper;
+
+// Usage: used in scholars only
+export const ScholarHeader = ({
+  name,
+  program,
+  university,
+  isShading,
+  imgUrl,
+}) => {
+  return (
+    <HeaderImageWrapper isShading={isShading} imgUrl={imgUrl}>
+      <div className="text-3xl mb-5">{name.toUpperCase()}</div>
+      <div className="text-customGreen">{program}</div>
+      <div>{university}</div>
+    </HeaderImageWrapper>
+  );
+};
