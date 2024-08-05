@@ -47,19 +47,21 @@ const ScholarProfile = ({
       <List title="School & Programme" points={programs} />
       <br />
 
-      <List title="Goals & Dreams" points={goals} />
+      {goals && <List title="Goals & Dreams" points={goals} />}
       <br />
 
-      <h4 className={subHeadingStyles}>Interesting facts about {name}</h4>
-      {facts?.map((fact) => (
-        <>
-          <p>{`Q: ${fact.question}`}</p>
-          <p className="font-extralight">
-            <i>{`A: ${fact.answer}`}</i>
-          </p>
-          <br />
-        </>
-      ))}
+      {facts && (
+          <h4 className={subHeadingStyles}>Interesting facts about {name}</h4>
+        ) &&
+        facts.map((fact) => (
+          <>
+            <p>{`Q: ${fact.question}`}</p>
+            <p className="font-extralight">
+              <i>{`A: ${fact.answer}`}</i>
+            </p>
+            <br />
+          </>
+        ))}
 
       <br />
       {images && (
