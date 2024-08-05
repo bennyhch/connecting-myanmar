@@ -10,7 +10,9 @@ import { ScholarHeader } from "../../components/HeaderImage";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import satkyarChart from "../../assets/scholars/satkyar_chart.png";
 import ScholarProfile from "../../components/ScholarProfile";
-import MainContentWrapper from "../../components/MainContentWrapper";
+import MainContentWrapper, {
+  ParagraphWrapper,
+} from "../../components/MainContentWrapper";
 
 const images = [satkyar1, satkyar2, satkyar3, satkyar4];
 
@@ -56,14 +58,12 @@ const Satkyar = () => {
       />
       <MainContentWrapper>
         <ScholarArticleWrapper name="nay satkyar naing" chart={satkyarChart}>
-          <p>
+          <ParagraphWrapper>
             The Saffron Revolution made me decide I want to be part of the
             change for my country
-          </p>
-          <br />
-          <br />
+          </ParagraphWrapper>
 
-          <p>
+          <ParagraphWrapper>
             When the Saffron Revolution happened in 2007, I was 15. Seeing many
             protesters including monks getting killed on the street made me
             question many things about our government. Why could the military do
@@ -73,31 +73,23 @@ const Satkyar = () => {
             happening? As I looked for answers to my own questions, I decided
             that I wanted to be part of something that can bring real change to
             Burma.
-          </p>
+          </ParagraphWrapper>
 
-          <br />
-          <br />
-
-          <p>
+          <ParagraphWrapper>
             When I was 18, I found my passion in writing and telling people’s
             stories of injustice. This started my dream to become a journalist.
             After finishing high school in 2009, I joined the printed media in
             Yangon. Two years later in 2011, I published my first article in
             Burmese New Life magazine and moved to Mae Sot in Thailand where I
             founded Young Generation Note (YGN).{" "}
-          </p>
+          </ParagraphWrapper>
 
-          <br />
-          <br />
-
-          <p>
+          <ParagraphWrapper>
             Exchanges with international communities confirmed my belief in
             independent media
-          </p>
-          <br />
-          <br />
+          </ParagraphWrapper>
 
-          <p>
+          <ParagraphWrapper>
             Young Generation Note (YGN) started as a journal of news, short
             stories and articles about current affairs from contributors in Mae
             Sot because the media were all controlled back in Burma, and there
@@ -106,12 +98,9 @@ const Satkyar = () => {
             started a summer media training workshop together. Our hope was to
             let more Mae Sot migrant and refugee youth understand the importance
             of the media and empower them to tell the truth and their stories.
-          </p>
+          </ParagraphWrapper>
 
-          <br />
-          <br />
-
-          <p>
+          <ParagraphWrapper>
             Apart from YGN, I also continued contributing stories mainly on
             Burmese migrant workers in Thailand for various newspaper, as well
             as weekly political “style-pens.” After my stories have accumulated
@@ -124,17 +113,13 @@ const Satkyar = () => {
             further convinced that democracy is necessary for a country to
             develop and change, and we certainly need independent media for
             that.
-          </p>
+          </ParagraphWrapper>
 
-          <br />
-          <br />
+          <ParagraphWrapper>
+            ​Education as a stepping stone to reach my goal
+          </ParagraphWrapper>
 
-          <p>​Education as a stepping stone to reach my goal</p>
-
-          <br />
-          <br />
-
-          <p>
+          <ParagraphWrapper>
             After the visit to Europe, I came back to Thailand and continued
             writing more, eventually launching YGN Publishing House in 2016 to
             publish 5 more books. For ten years now, I have been pursuing my
@@ -145,12 +130,9 @@ const Satkyar = () => {
             skills and belief that with pen and camera, I can bring change.
             Later, I began to see the value of education, but I lacked the
             financial means to study in university.
-          </p>
+          </ParagraphWrapper>
 
-          <br />
-          <br />
-
-          <p>
+          <ParagraphWrapper>
             Now, I will be embarking on my Bachelor’s degree in the Innovative
             Media Production at Bangkok University this August 2019. As social
             and online media are replacing printed media in Burma, I chose this
@@ -161,10 +143,7 @@ const Satkyar = () => {
             explore new ways to diffuse information in South East Asia, and to
             build independent media in Burma as this has been my dream since the
             beginning.
-          </p>
-
-          <br />
-          <br />
+          </ParagraphWrapper>
 
           <p>
             I met Satkyar in 2013 when Connecting Myanmar had the first media

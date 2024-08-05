@@ -1,6 +1,8 @@
 import React from "react";
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper from "../../components/MainContentWrapper";
+import MainContentWrapper, {
+  ParagraphWrapper,
+} from "../../components/MainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -45,14 +47,12 @@ const Blessing = () => {
       />
       <MainContentWrapper>
         <ScholarArticleWrapper name="Naw Blessing" chart={blessingChart}>
-          <p>
+          <ParagraphWrapper>
             “I know I can’t change my country but, I want to be a part of the
             change”
-          </p>
-          <br />
-          <br />
+          </ParagraphWrapper>
 
-          <p>
+          <ParagraphWrapper>
             When I was 15, my family had to leave our home in Southern Shan
             State to pursue a better life and education in Thai-Burma border. We
             moved to Mae La refugee camp after one of my uncles who was a Karen
@@ -60,11 +60,9 @@ const Blessing = () => {
             finished my high school in the camp and worked for Adventist
             Development and Relief Agency (ADRA) for a year before studying at
             Australian Catholic University (ACU).
-          </p>
-          <br />
-          <br />
+          </ParagraphWrapper>
 
-          <p>
+          <ParagraphWrapper>
             After ACU, I wanted to study at a University, but I didn’t know what
             I really wanted to pursue or what I was actually passionate in. I
             applied for many scholarships, but they all failed. So, I gave up
@@ -75,11 +73,9 @@ const Blessing = () => {
             career as a nurse and worked all her life to improve the healthcare
             of hill tribe people. I wanted to be like her. I wanted to help my
             people one day.
-          </p>
-          <br />
-          <br />
+          </ParagraphWrapper>
 
-          <p>
+          <ParagraphWrapper>
             After working at Mae Fah Luang foundation for five years, I started
             to question myself. I saw all my friends graduating from their
             Universities and I wanted to be as successful like they were. I also
@@ -90,11 +86,9 @@ const Blessing = () => {
             with reliable salary and to pursue something that was not all
             certain at the time to me, I know deep inside this is what I should
             do in order for me to grow.
-          </p>
-          <br />
-          <br />
+          </ParagraphWrapper>
 
-          <p>
+          <ParagraphWrapper>
             It was not easy to get admitted to Chiang Mai University, but
             thankfully, my previous work experience helped me secure a place.
             Now, I am in my second year studying Nursing Science at an
@@ -102,18 +96,14 @@ const Blessing = () => {
             enjoy doing group presentation, project and research. It is also
             very inspiring to meet classmates and professors from different
             countries.
-          </p>
-          <br />
-          <br />
+          </ParagraphWrapper>
 
-          <p>
+          <ParagraphWrapper>
             Connecting with Connecting Myanmar through Medical Project in Mae
             Sot
-          </p>
-          <br />
-          <br />
+          </ParagraphWrapper>
 
-          <p>
+          <ParagraphWrapper>
             I first learnt about Connecting Myanmar when a friend of mine
             approached me for a favour. He asked me if I wanted to help with
             translating medical document for a project in Mae Sot. Although it
@@ -122,21 +112,17 @@ const Blessing = () => {
             Connecting Myanmar’s medical project and ended up joining the group
             in June for their two-week programme promoting healthcare at migrant
             schools in Mae Sot area.
-          </p>
-          <br />
-          <br />
+          </ParagraphWrapper>
 
-          <p>
+          <ParagraphWrapper>
             This program taught me a lot; I learnt a lot from fellow students
             from HKU. I learnt to work with a team and learn to communicate with
             fellow teammates. It is also a great project for me since I am
             passionate in healthcare. I would like to get involved in more
             project like this in the future.
-          </p>
-          <br />
-          <br />
+          </ParagraphWrapper>
 
-          <p>
+          <ParagraphWrapper>
             Naw Blessing was one of a group of very impressive young students in
             the ACU’s diploma program when I first arrived in this
             region...Apart from being an outstanding student academically,
@@ -148,7 +134,7 @@ const Blessing = () => {
             altruistic goal to serve her community in the caring profession of
             nursing." ​ - Rosaleen, Honorary Fellow of Australian Catholic
             University
-          </p>
+          </ParagraphWrapper>
         </ScholarArticleWrapper>
 
         <ScholarProfile

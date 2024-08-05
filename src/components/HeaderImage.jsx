@@ -34,7 +34,7 @@ export const ScholarHeader = ({
 }) => {
   return (
     <HeaderImageWrapper isShading={isShading} imgUrl={imgUrl}>
-      <div className="text-3xl mb-5">{name.toUpperCase()}</div>
+      <div className="text-3xl mb-5">{name?.toUpperCase()}</div>
       <div className="text-customGreen">{program}</div>
       <div>{university}</div>
     </HeaderImageWrapper>

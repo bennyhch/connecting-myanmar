@@ -11,3 +11,12 @@ const MainContentWrapper = ({ children }) => {
 };
 
 export default MainContentWrapper;
+
+// Usage: used in scholars only
+export const ParagraphWrapper = ({ children }) => (
+  <>
+    <p>{children}</p>
+    <br />
+    <br />
+  </>
+);
