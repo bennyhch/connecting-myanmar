@@ -1,4 +1,5 @@
 import React from "react";
+
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
@@ -7,15 +8,33 @@ import { FaLinkedin } from "react-icons/fa";
 import NavButton from "../components/NavButton";
 import Divider from "../components/Divider";
 import RoundButton from "../components/RoundButton";
-
-import { SectionHeading } from "../utils/wrappers";
-
-import { sectionWrapperStyles, shading50Styles } from "../utils/classStyles";
 import HeaderImageWrapper from "../components/HeaderImage";
 
-const buttonsContainerStyles = "mt-8 w-1/2 flex justify-around";
+import { SectionHeading } from "../utils/wrappers";
+import { sectionWrapperStyles, shading50Styles } from "../utils/classStyles";
 
-// let iconStyles = { color: "green", fontSize: "1.5em" };
+const buttonsContainerStyles =
+  "mt-8 w-full flex gap-3 justify-around flex-wrap sm:w-1/2 sm:flex-row";
+const iconStyles = "text-2xl transition-transform transform hover:scale-125";
+
+const iconsData = [
+  {
+    link: "https://www.facebook.com/ConnectingMyanmar/",
+    icon: <FaFacebook className={iconStyles} />,
+  },
+  {
+    link: "https://www.instagram.com/connectingmyanmar",
+    icon: <FaInstagram className={iconStyles} />,
+  },
+  {
+    link: "https://www.linkedin.com/in/connectingmyanmar/",
+    icon: <FaLinkedin className={iconStyles} />,
+  },
+  {
+    link: "mailto: info@connectingmyanmar.org",
+    icon: <AiOutlineMail className={iconStyles} />,
+  },
+];
 
 const IconLink = ({ link, icon }) => {
   return (
@@ -102,22 +121,9 @@ const Home = () => {
             </div>
 
             <div className={buttonsContainerStyles}>
-              <IconLink
-                link="https://www.facebook.com/ConnectingMyanmar/"
-                icon={<FaFacebook size={20} />}
-              />
-              <IconLink
-                link="https://www.instagram.com/connectingmyanmar"
-                icon={<FaInstagram size={20} color="#777C92" />}
-              />
-              <IconLink
-                link="https://www.linkedin.com/in/connectingmyanmar/"
-                icon={<FaLinkedin size={20} />}
-              />
-              <IconLink
-                link="mailto: info@connectingmyanmar.org"
-                icon={<AiOutlineMail size={20} />}
-              />
+              {iconsData.map((data, index) => (
+                <IconLink key={index} link={data.link} icon={data.icon} />
+              ))}
             </div>
           </div>
         </div>

@@ -84,7 +84,7 @@ const Aid = () => (
             instrument sets for minor surgical procedure
           </li>
           <li>
-            <spna className="text-customBrown font-semibold">US $500</spna> -
+            <span className="text-customBrown font-semibold">US $500</span> -
             Treatment required for life-saving advanced emergency obstetric care
             (caesarean section)
           </li>
