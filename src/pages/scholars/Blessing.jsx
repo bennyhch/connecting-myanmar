@@ -1,8 +1,8 @@
 import React from "react";
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -45,7 +45,7 @@ const Blessing = () => {
         program="Nursing Science"
         university="Chiang Mai University"
       />
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="Naw Blessing" chart={blessingChart}>
           <ParagraphWrapper>
             “I know I can’t change my country but, I want to be a part of the
@@ -148,7 +148,7 @@ const Blessing = () => {
           facts={facts}
           images={images}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };

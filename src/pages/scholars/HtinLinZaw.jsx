@@ -2,9 +2,9 @@ import React from "react";
 
 import htinlinnzaw from "../../assets/scholars/htinlinnzaw.png";
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -41,7 +41,7 @@ const HtinLinZaw = () => {
         university="Mae Fah Luang University"
       />
 
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="Htin Linn Zaw">
           <ParagraphWrapper>
             Hi! I’m Htin Linn Zaw, a second-year student studying Business
@@ -92,7 +92,7 @@ const HtinLinZaw = () => {
           facts={facts}
           goals={goals}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };

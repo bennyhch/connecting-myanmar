@@ -1,9 +1,9 @@
 import React from "react";
 
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -31,7 +31,7 @@ const AungHtetOo = () => {
         program="Nursing Science"
         university="Chiang Mai University"
       />
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="saw aung htet oo">
           <ParagraphWrapper>
             Hi! I am Aung Htet Oo, a final year nursing student in Chiang Mai
@@ -86,7 +86,7 @@ const AungHtetOo = () => {
           goals={goals}
           images={images}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };

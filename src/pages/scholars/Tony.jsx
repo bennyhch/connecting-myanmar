@@ -2,9 +2,9 @@ import React from "react";
 
 import tony from "../../assets/scholars/tony/tony.jpeg";
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -53,7 +53,7 @@ const Tony = () => {
         program="English for International Communication"
         university="Chiang Mai Rajabhat University"
       />
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="Tony">
           <ParagraphWrapper>
             Hi! I’m Tun Aye (a.k.a. Tony), an English major in Chiang Mai
@@ -98,7 +98,7 @@ const Tony = () => {
           goals={goals}
           facts={facts}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };

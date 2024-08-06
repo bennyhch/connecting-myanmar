@@ -5,9 +5,9 @@ import naysoe1 from "../../assets/scholars/naysoe/naysoe1.jpg";
 import naysoe2 from "../../assets/scholars/naysoe/naysoe2.jpg";
 import naysoe3 from "../../assets/scholars/naysoe/naysoe3.jpg";
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -45,7 +45,7 @@ const NaySoe = () => {
         program="Bachelor of Education in Teaching"
         university="Asia Pacific International University"
       />
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="Nay Soe" highlight={highlight}>
           <ParagraphWrapper>
             Hi I’m Nay Soe. I have recently graduated with a Bachelor’s degree
@@ -99,7 +99,7 @@ const NaySoe = () => {
           programs={programs}
           images={images}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };

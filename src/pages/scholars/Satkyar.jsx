@@ -5,14 +5,15 @@ import satkyar1 from "../../assets/scholars/satkyar1.jpg";
 import satkyar2 from "../../assets/scholars/satkyar2.jpg";
 import satkyar3 from "../../assets/scholars/satkyar3.jpg";
 import satkyar4 from "../../assets/scholars/satkyar4.jpg";
+import satkyarChart from "../../assets/scholars/satkyar_chart.png";
+
 import { ScholarHeader } from "../../components/HeaderImage";
 
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
-import satkyarChart from "../../assets/scholars/satkyar_chart.png";
 import ScholarProfile from "../../components/ScholarProfile";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 
 const images = [satkyar1, satkyar2, satkyar3, satkyar4];
 
@@ -56,7 +57,7 @@ const Satkyar = () => {
         program="Innovative Media Production"
         university="Bangkok University"
       />
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="nay satkyar naing" chart={satkyarChart}>
           <ParagraphWrapper>
             The Saffron Revolution made me decide I want to be part of the
@@ -169,7 +170,7 @@ const Satkyar = () => {
           facts={facts}
           images={images}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };

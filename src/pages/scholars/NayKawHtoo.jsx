@@ -1,9 +1,9 @@
 import React from "react";
 
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -44,7 +44,7 @@ const NayKawHtoo = () => (
       program="Social Sciences"
       university="Chiang Mai University"
     />
-    <MainContentWrapper>
+    <ScholarMainContentWrapper>
       <ScholarArticleWrapper name="saw nay kaw htoo">
         <ParagraphWrapper>
           Hi, I’m Saw Nay Kaw Htoo! After graduating from high school, I did not
@@ -98,7 +98,7 @@ const NayKawHtoo = () => (
         goals={goals}
         facts={facts}
       />
-    </MainContentWrapper>
+    </ScholarMainContentWrapper>
   </div>
 );
 

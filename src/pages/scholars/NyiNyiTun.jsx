@@ -1,9 +1,9 @@
 import React from "react";
 
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -57,7 +57,7 @@ const NyiNyiTun = () => {
         program="Business Administration"
         university="Mae Fah Lung University"
       />
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="nyi nyi tun">
           <ParagraphWrapper>
             My family used to lead a humble life in the Karen State of Myanmar.
@@ -116,7 +116,7 @@ const NyiNyiTun = () => {
           facts={facts}
           images={images}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };

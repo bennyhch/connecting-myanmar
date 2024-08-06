@@ -4,10 +4,11 @@ import deekuChart from "../../assets/scholars/deeku/deeku_chart.png";
 import deeku from "../../assets/scholars/deeku.png";
 import deeku1 from "../../assets/scholars/deeku/deeku1.jpg";
 import deeku2 from "../../assets/scholars/deeku/deeku2.jpg";
+
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -54,7 +55,7 @@ const Deeku = () => {
         program="International Business Management"
         university="University of the Thai Chamber of Commerce"
       />
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="Deeku" chart={deekuChart}>
           <ParagraphWrapper>
             Hi! My name is Deeku. I was born in Kayah State, Myanmar. When I was
@@ -120,7 +121,7 @@ const Deeku = () => {
           facts={facts}
           images={images}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };

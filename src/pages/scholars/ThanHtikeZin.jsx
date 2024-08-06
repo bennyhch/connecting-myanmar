@@ -4,9 +4,9 @@ import than from "../../assets/scholars/than/than.jpg";
 import than1 from "../../assets/scholars/than/than1.jpg";
 import than2 from "../../assets/scholars/than/than2.jpg";
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -50,7 +50,7 @@ const ThanHtikeZin = () => {
         program="Information and Communication Technology"
         university="Rangsit University International College"
       />
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="saw than htike zin">
           <ParagraphWrapper>
             Hi! My name is Than Htike Zin. There are eight people in my family;
@@ -106,7 +106,7 @@ const ThanHtikeZin = () => {
           facts={facts}
           images={images}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import React from "react";
 
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -42,7 +42,7 @@ const NayMin = () => (
       program="Civil Engineering"
       university="Rangsit University"
     />
-    <MainContentWrapper>
+    <ScholarMainContentWrapper>
       <ScholarArticleWrapper name="nay min">
         <ParagraphWrapper>
           My name is Saw Nay Min. I am a Burmese student studying Civil
@@ -96,7 +96,7 @@ const NayMin = () => (
         facts={facts}
         images={images}
       />
-    </MainContentWrapper>
+    </ScholarMainContentWrapper>
   </div>
 );
 

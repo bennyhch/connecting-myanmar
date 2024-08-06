@@ -1,18 +1,18 @@
 import React from "react";
 
-import { ScholarHeader } from "../../components/HeaderImage";
-import ScholarProfile from "../../components/ScholarProfile";
-
 import dingoChart from "../../assets/scholars/dingo_chart.png";
 import dingo from "../../assets/scholars/dingo.png";
 import dingo1 from "../../assets/scholars/dingo1.jpg";
 import dingo2 from "../../assets/scholars/dingo2.jpg";
 import dingo3 from "../../assets/scholars/dingo3.jpg";
 import dingo4 from "../../assets/scholars/dingo4.jpg";
+
+import { ScholarHeader } from "../../components/HeaderImage";
+import ScholarProfile from "../../components/ScholarProfile";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 
 const images = [dingo1, dingo2, dingo3, dingo4];
 
@@ -47,7 +47,7 @@ const Dingo = () => {
         program="Business Management"
         university="University of the Thai Chamber of Commerce"
       />
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="Dingo" chart={dingoChart}>
           <ParagraphWrapper>Fleeing to Thailand</ParagraphWrapper>
 
@@ -139,7 +139,7 @@ const Dingo = () => {
           facts={facts}
           images={images}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };

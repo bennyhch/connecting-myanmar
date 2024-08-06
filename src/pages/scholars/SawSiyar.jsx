@@ -5,9 +5,9 @@ import sawsiyar1 from "../../assets/scholars/siyar/siyar1.jpg";
 import sawsiyar2 from "../../assets/scholars/siyar/siyar2.png";
 
 import { ScholarHeader } from "../../components/HeaderImage";
-import MainContentWrapper, {
+import ScholarMainContentWrapper, {
   ParagraphWrapper,
-} from "../../components/MainContentWrapper";
+} from "../../components/ScholarMainContentWrapper";
 import ScholarArticleWrapper from "../../components/ScholarArticleWrapper";
 import ScholarProfile from "../../components/ScholarProfile";
 
@@ -29,7 +29,7 @@ const SawSiyar = () => {
         program="Business Administration"
         university="Mae Fah Luang University"
       />
-      <MainContentWrapper>
+      <ScholarMainContentWrapper>
         <ScholarArticleWrapper name="Saw Siyar">
           <ParagraphWrapper>
             Hi I’m Siyar, a third-year Business student in Mae Fah Lung
@@ -85,7 +85,7 @@ const SawSiyar = () => {
           programs={programs}
           images={images}
         />
-      </MainContentWrapper>
+      </ScholarMainContentWrapper>
     </div>
   );
 };
