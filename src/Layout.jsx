@@ -9,7 +9,7 @@ const LogoContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 15vh;
+  height: 12vh;
 `;
 
 const LogoImage = styled.img`

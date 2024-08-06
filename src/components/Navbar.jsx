@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
 import OurScholars from "../pages/OurScholars";
@@ -18,7 +18,7 @@ const aboutMenuItems = [
   { href: "contact-us", component: () => ContactUs, text: "CONTACT US" },
 ];
 
-const NavLink = ({ href, text, menuItems, newTab }) => {
+const NavLink = ({ href, text, menuItems, newTab, onClick }) => {
   return (
     <li className="relative group">
       <Link
@@ -26,6 +26,7 @@ const NavLink = ({ href, text, menuItems, newTab }) => {
         target={newTab ? "_blank" : "_self"}
         rel={newTab ? "noreferrer" : ""}
         className="hover:underline custom-underline focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center"
+        onClick={onClick}
       >
         {text}
       </Link>
@@ -37,6 +38,7 @@ const NavLink = ({ href, text, menuItems, newTab }) => {
                 <Link
                   to={item.href}
                   className="block px-4 py-3 hover:bg-gray-200"
+                  onClick={onClick}
                 >
                   {item.text}
                 </Link>
@@ -50,26 +52,115 @@ const NavLink = ({ href, text, menuItems, newTab }) => {
 };
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const menuRef = useRef(null);
+
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
+
+  const closeMenuItem = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
-    <nav className="py-3">
-      <ul className="flex justify-center gap-x-10">
-        <NavLink href="/" text="HOME" />
-        <NavLink href="/about" menuItems={aboutMenuItems} text="ABOUT" />
-        <NavLink
-          href="/scholarship"
-          menuItems={scholarshipMenuItems}
-          text="SCHOLARSHIP"
-        />
-        <NavLink href="/aid" text="HUMANITARIAN AID" />
-        <NavLink href="/donate" text="DONATE" />
-        <NavLink
-          href="https://www.artsy.net/partner/connecting-myanmar"
-          text="ART"
-          newTab
-        />
-        <NavLink href="/faqs" text="FAQS" />
-      </ul>
-    </nav>
+    <>
+      <nav className="py-3 hidden lg:block">
+        <ul className="flex justify-center gap-x-10">
+          <NavLink href="/" text="HOME" />
+          <NavLink href="/about" menuItems={aboutMenuItems} text="ABOUT" />
+          <NavLink
+            href="/scholarship"
+            menuItems={scholarshipMenuItems}
+            text="SCHOLARSHIP"
+          />
+          <NavLink href="/aid" text="HUMANITARIAN AID" />
+          <NavLink href="/donate" text="DONATE" />
+          <NavLink
+            href="https://www.artsy.net/partner/connecting-myanmar"
+            text="ART"
+            newTab
+          />
+          <NavLink href="/faqs" text="FAQS" />
+        </ul>
+      </nav>
+
+      {/* Mobile Hamburger Menu */}
+      <div className="lg:hidden flex justify-end p-3">
+        <button
+          className="text-gray-800 focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d={
+                isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"
+              }
+            />
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <nav
+          ref={menuRef}
+          className="lg:hidden shadow-lg rounded-lg p-5 absolute top-16 right-0 z-20 w-64 bg-slate-300"
+        >
+          <ul className="flex flex-col gap-y-5">
+            <NavLink href="/" text="HOME" onClick={closeMenuItem} />
+            <NavLink
+              href="/about"
+              menuItems={aboutMenuItems}
+              text="ABOUT"
+              onClick={closeMenuItem}
+            />
+            <NavLink
+              href="/scholarship"
+              menuItems={scholarshipMenuItems}
+              text="SCHOLARSHIP"
+              onClick={closeMenuItem}
+            />
+            <NavLink
+              href="/aid"
+              text="HUMANITARIAN AID"
+              onClick={closeMenuItem}
+            />
+            <NavLink href="/donate" text="DONATE" onClick={closeMenuItem} />
+            <NavLink
+              href="https://www.artsy.net/partner/connecting-myanmar"
+              text="ART"
+              newTab
+              onClick={closeMenuItem}
+            />
+            <NavLink href="/faqs" text="FAQS" onClick={closeMenuItem} />
+          </ul>
+        </nav>
+      )}
+    </>
   );
 };
 
