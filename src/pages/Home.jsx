@@ -11,7 +11,9 @@ import RoundButton from "../components/RoundButton";
 import HeaderImageWrapper from "../components/HeaderImage";
 
 import { SectionHeading } from "../utils/wrappers";
-import { sectionWrapperStyles, shading50Styles } from "../utils/classStyles";
+import { shading50Styles } from "../utils/classStyles";
+
+const sectionWrapperStyles = "max-w-3xl w-full mx-auto my-50";
 
 const buttonsContainerStyles =
   "mt-8 w-full flex gap-3 justify-around flex-wrap sm:w-1/2 sm:flex-row";
@@ -54,8 +56,10 @@ const Home = () => {
         ASPIRATIONS
       </HeaderImageWrapper>
 
-      <main className="flex justify-center items-center flex-col w-full text-justify">
-        <section className={`${sectionWrapperStyles} mt-14`}>
+      <main className="flex justify-center items-center flex-col w-full text-justify px-10">
+        <br />
+        <br />
+        <section className={sectionWrapperStyles}>
           <SectionHeading text="OUR MISSION" textColor="text-customGold" />
           <p className="mb-3">
             To inspire youth to think critically with an empathetic lens through
@@ -100,7 +104,7 @@ const Home = () => {
         <div className="bg-[url('/src/assets/footer.jpg')] h-full bg-cover bg-center relative">
           <div className={shading50Styles}></div>
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-white text-center space-y-10">
-            <p className="w-1/2">
+            <p className="w-1/2 text-white font-bold">
               All profit from the artwork sale goes to support our scholarship
               program, sending ​Myanmar students to Universities. Visit us on
               Artsy:

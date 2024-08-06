@@ -2,9 +2,7 @@ import React from "react";
 
 import HeaderImageWrapper from "../components/HeaderImage";
 import NavButton from "../components/NavButton";
-import PageContentWrapper, {
-  PageSectionWrapper,
-} from "../components/PageContentWrapper";
+import PageContentWrapper from "../components/PageContentWrapper";
 import { SectionHeading } from "../utils/wrappers";
 
 import patronSteps from "../assets/patronSteps.png";
@@ -34,7 +32,10 @@ const Patrons = () => {
       </HeaderImageWrapper>
 
       <PageContentWrapper>
-        <PageSectionWrapper isTopSection>
+        <section className="max-w-5xl w-full mx-auto my-50 px-10 pb-10">
+          <br />
+          <br />
+
           <SectionHeading
             text="ABOUT OUR PATRON PROGRAMME"
             textColor="text-customGold"
@@ -66,7 +67,6 @@ const Patrons = () => {
             </ImageContainer>
           </article>
 
-          {/* <article className="flex flex-wrap"> */}
           <article className="flex flex-wrap mt-8">
             <TextContainer title="BEING A PATRON">
               <ol className="list-decimal pt-3 p-8">
@@ -90,7 +90,7 @@ const Patrons = () => {
             </ImageContainer>
           </article>
           <NavButton link="/our-scholars" text="MEET OUR STUDENTS" />
-        </PageSectionWrapper>
+        </section>
       </PageContentWrapper>
     </div>
   );
