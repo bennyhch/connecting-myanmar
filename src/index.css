@@ -43,9 +43,10 @@ code {
 }
 
 .gallery {
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 16px; /* Adjust the gap as needed */
+  gap: 20px; /* Adjust the gap as needed */
 }
 
 .card {

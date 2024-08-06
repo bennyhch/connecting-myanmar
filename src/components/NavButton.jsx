@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const buttonBaseStyles = "border border-black p-3 px-4";
+const buttonBaseStyles = "border border-black p-3 px-4 rounded-xl";
 const buttonHoverStyles =
   "transition duration-700 hover:bg-black hover:text-white";
 
