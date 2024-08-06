@@ -2,7 +2,9 @@ import React from "react";
 import { SectionHeading } from "../utils/wrappers";
 
 import HeaderImageWrapper from "../components/HeaderImage";
-import { PageSectionWrapper } from "../components/PageContentWrapper";
+import PageContentWrapper, {
+  PageSectionWrapper,
+} from "../components/PageContentWrapper";
 
 const About = () => {
   return (
@@ -13,7 +15,7 @@ const About = () => {
         ​THEIR POTENTIALS AND ASPIRATIONS.
       </HeaderImageWrapper>
 
-      <PageSectionWrapper>
+      <PageContentWrapper>
         <PageSectionWrapper isTopSection>
           <SectionHeading text="OUR STORY" textColor="text-customGold" />
           <p>Every journey has a story to tell.</p>
@@ -77,7 +79,7 @@ const About = () => {
             realise their potentials and aspirations.
           </p>
         </PageSectionWrapper>
-      </PageSectionWrapper>
+      </PageContentWrapper>
     </div>
   );
 };
