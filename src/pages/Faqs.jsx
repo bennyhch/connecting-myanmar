@@ -1,13 +1,13 @@
 import React from "react";
 import HeaderImageWrapper from "../components/HeaderImage";
-import { SectionHeading } from "../utils/wrappers";
 import NavButton from "../components/NavButton";
+import PageContentWrapper, {
+  PageSectionWrapper,
+} from "../components/PageContentWrapper";
 
 const QuestionWrapper = ({ children }) => (
   <>
     <br />
-    {/* <br /> */}
-    {/* <p className="font-bold">{children}</p> */}
     <p className="font-semibold">{children}</p>
   </>
 );
@@ -21,17 +21,17 @@ const AnswerWrapper = ({ children }) => (
 const Faqs = () => {
   return (
     <div>
-      <HeaderImageWrapper imgUrl="bg-[url('/src/assets/structure.jpg')]" />
+      <HeaderImageWrapper
+        imgUrl="bg-[url('/src/assets/structure.jpg')]"
+        isShading
+      >
+        <span className="text-customGreen">FREQUENTLY ASKED QUESTIONS</span>
+      </HeaderImageWrapper>
 
-      <main className="w-full text-justify">
-        <section className="max-w-5xl w-full mx-auto my-50 mt-14">
-          <SectionHeading
-            text="Frequently ASKED QUESTIONS"
-            textColor="text-customGold"
-          />
+      <PageContentWrapper>
+        <PageSectionWrapper isTopSection>
           <article>
-            <br />
-            <h4 className="text-customGreen font-bold text-xl">
+            <h4 className="text-customGold font-bold text-xl">
               About Donations
             </h4>
             <QuestionWrapper>What are CM's sources of funding?</QuestionWrapper>
@@ -101,7 +101,7 @@ const Faqs = () => {
           <article>
             <br />
             <br />
-            <h4 className="text-customGreen font-bold text-xl">
+            <h4 className="text-customGold font-bold text-xl">
               CM’s Scholarship Scheme
             </h4>
             <QuestionWrapper>
@@ -158,7 +158,7 @@ const Faqs = () => {
           <article>
             <br />
             <br />
-            <h4 className="text-customGreen font-bold text-xl">
+            <h4 className="text-customGold font-bold text-xl">
               CM's Patron Programme
             </h4>
             <QuestionWrapper>
@@ -201,8 +201,8 @@ const Faqs = () => {
             </AnswerWrapper>
           </article>
           <NavButton link="/contact" text="CONTACT US" />
-        </section>
-      </main>
+        </PageSectionWrapper>
+      </PageContentWrapper>
     </div>
   );
 };

@@ -3,14 +3,18 @@ import React from "react";
 import HeaderImageWrapper from "../components/HeaderImage";
 import NavButton from "../components/NavButton";
 import { SectionHeading } from "../utils/wrappers";
+import PageContentWrapper, {
+  PageSectionWrapper,
+} from "../components/PageContentWrapper";
 
 const Aid = () => (
   <div>
     <HeaderImageWrapper imgUrl="bg-[url('/src/assets/aid.jpg')]">
       IN <span className="text-customGreen">SOLIDARITY</span> WITH THE PEOPLE
     </HeaderImageWrapper>
-    <main className="w-full text-justify">
-      <section className="max-w-5xl w-full mx-auto my-50 mt-14">
+
+    <PageContentWrapper>
+      <PageSectionWrapper isTopSection>
         <SectionHeading
           text="SUPPORT MAE TAO CLINIC"
           textColor="text-customGreen"
@@ -36,7 +40,9 @@ const Aid = () => (
         <br />
         <br />
 
-        <p>By donating to Mae Tao Clinic, you will be supporting:</p>
+        <p className="font-semibold">
+          By donating to Mae Tao Clinic, you will be supporting:
+        </p>
         <ol className="list-decimal pt-3 p-8">
           <li>
             Health workers who are{" "}
@@ -52,10 +58,11 @@ const Aid = () => (
             </span>
           </li>
         </ol>
+        <br />
 
-        <br />
-        <br />
-        <p>The list below is how your donation will help:</p>
+        <p className="font-semibold">
+          The list below is how your donation will help:
+        </p>
 
         <ul className="list-disc pt-3 p-8">
           <li>
@@ -118,8 +125,8 @@ const Aid = () => (
         <br />
 
         <NavButton text="I WANT TO SUPPORT MAW TAO CLINIC" link="/donate" />
-      </section>
-    </main>
+      </PageSectionWrapper>
+    </PageContentWrapper>
   </div>
 );
 

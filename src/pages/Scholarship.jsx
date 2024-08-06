@@ -3,6 +3,9 @@ import { SectionHeading } from "../utils/wrappers";
 
 import NavButton from "../components/NavButton";
 import HeaderImageWrapper from "../components/HeaderImage";
+import PageContentWrapper, {
+  PageSectionWrapper,
+} from "../components/PageContentWrapper";
 
 const SubTitle = ({ title }) => {
   return <h3 className="text-customGold font-semibold">{title}</h3>;
@@ -20,8 +23,8 @@ const Scholarship = () => {
         THE BROADER COMMUNITY
       </HeaderImageWrapper>
 
-      <main className="w-full text-justify">
-        <section className="max-w-5xl w-full mx-auto my-50 mt-14">
+      <PageContentWrapper>
+        <PageSectionWrapper isTopSection>
           <SectionHeading
             text="FEATURES OF OUR SCHOLARSHIP SCHEME"
             textColor="text-customGreen"
@@ -55,8 +58,8 @@ const Scholarship = () => {
           </p>
           <br />
           <NavButton link="/patrons" text="BECOMING A PATRON" />
-        </section>
-      </main>
+        </PageSectionWrapper>
+      </PageContentWrapper>
     </div>
   );
 };

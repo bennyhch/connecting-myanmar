@@ -1,8 +1,8 @@
 import React from "react";
 import { SectionHeading } from "../utils/wrappers";
 
-import { sectionWrapperStyles } from "../utils/classStyles";
 import HeaderImageWrapper from "../components/HeaderImage";
+import { PageSectionWrapper } from "../components/PageContentWrapper";
 
 const About = () => {
   return (
@@ -13,8 +13,8 @@ const About = () => {
         ​THEIR POTENTIALS AND ASPIRATIONS.
       </HeaderImageWrapper>
 
-      <main className="w-full text-justify">
-        <section className={`${sectionWrapperStyles} mt-14`}>
+      <PageSectionWrapper>
+        <PageSectionWrapper isTopSection>
           <SectionHeading text="OUR STORY" textColor="text-customGold" />
           <p>Every journey has a story to tell.</p>
           <br />
@@ -76,8 +76,8 @@ const About = () => {
             an empathetic world where everyone has the equal opportunity to
             realise their potentials and aspirations.
           </p>
-        </section>
-      </main>
+        </PageSectionWrapper>
+      </PageSectionWrapper>
     </div>
   );
 };

@@ -5,6 +5,9 @@ import streetLawOne from "../assets/street-law-1.jpg";
 import streetLawTwo from "../assets/street-law-2.jpg";
 import streetLawThree from "../assets/street-law-3.jpg";
 import HeaderImageWrapper from "../components/HeaderImage";
+import PageContentWrapper, {
+  PageSectionWrapper,
+} from "../components/PageContentWrapper";
 
 const ImageContainer = ({ children }) => {
   return <div className="w-full max-w-80">{children}</div>;
@@ -22,8 +25,8 @@ const Programmes = () => {
         STUDENTS TO PURSUE THEIR SOCIAL CALLING AND ​HELP CREATE AN EMPATHETIC
         WORLD.
       </HeaderImageWrapper>
-      <main className="w-full text-justify">
-        <section className="max-w-5xl w-full mx-auto my-50 mt-14">
+      <PageContentWrapper>
+        <PageSectionWrapper isTopSection>
           <p className="text-lg mb-10">
             SINCE 2012, WE NOW HAVE OVER{" "}
             <span className="text-customBrown">250 VOLUNTEERS</span> FROM
@@ -69,8 +72,8 @@ const Programmes = () => {
               />
             </ImageContainer>
           </div>
-        </section>
-      </main>
+        </PageSectionWrapper>
+      </PageContentWrapper>
     </div>
   );
 };

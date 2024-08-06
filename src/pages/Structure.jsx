@@ -2,6 +2,9 @@ import React from "react";
 import { SectionHeading } from "../utils/wrappers";
 
 import HeaderImageWrapper from "../components/HeaderImage";
+import PageContentWrapper, {
+  PageSectionWrapper,
+} from "../components/PageContentWrapper";
 
 const Structure = () => {
   return (
@@ -13,8 +16,8 @@ const Structure = () => {
         ORGANIZATIONAL <span className="text-customGreen">STRUCTURE</span>
       </HeaderImageWrapper>
 
-      <main className="w-full text-justify">
-        <section className="max-w-5xl w-full mx-auto my-50 mt-14">
+      <PageContentWrapper>
+        <PageSectionWrapper isTopSection>
           <SectionHeading
             text="JOIN US TO BECOME A PART OF CM FAMILY!"
             textColor="text-customGold"
@@ -39,8 +42,8 @@ const Structure = () => {
             https://forms.gle/UQa5F5tWVKiRwhSj7 and we will get in touch as soon
             as we can!
           </p>
-        </section>
-      </main>
+        </PageSectionWrapper>
+      </PageContentWrapper>
     </div>
   );
 };
