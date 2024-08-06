@@ -17,6 +17,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+p {
+  font-family: "Actor", sans-serif;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -35,9 +48,9 @@ code {
 
 .card {
   flex: 1 1 calc(50% - 20px);
-  border: 1px solid black;
+  /* border: 1px solid black; */
   padding: 20px;
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 
   display: flex;
   flex-direction: column;
@@ -49,13 +62,18 @@ code {
 }
 
 .image-container {
-  width: 80%;
+  width: 90%;
+  height: 50%;
+  /* max-height: 90%; */
+  /* border: 1px solid blue; */
 }
 
 .text-container {
-  width: 80%;
-
-  min-height: 100px; /* Adjust this based on your design */
+  border: 1px solid red;
+  margin-top: 1.5rem;
+  width: 90%;
+  height: 30px;
+  min-height: 150px; /* Adjust this based on your design */
   margin-bottom: 1rem; /* Add space between text and button */
 }
 

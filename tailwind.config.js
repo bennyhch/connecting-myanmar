@@ -3,6 +3,10 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        actor: ["Actor", "sans-serif"],
+        ubuntu: ["Ubuntu", "sans-serif"],
+      },
       backgroundImage: {
         "home-intro": "url('/src/assets/home-intro.jpg')",
       },
