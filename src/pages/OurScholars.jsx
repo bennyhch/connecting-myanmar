@@ -10,12 +10,12 @@ const Gallery = () => {
     <div className="gallery">
       {scholars.map(({ name, img, quote, link }, index) => (
         <div className="card" key={index}>
-          <h3 className="text-customGold font-bold mb-3">{name}</h3>
+          <h3 className="text-customGold font-bold mb-3 text-xl">{name}</h3>
           <div className="image-container">
             <img src={img} alt={name} />
           </div>
           <div className="text-container">
-            <p>{quote}</p>
+            <p className="py-5">{quote}</p>
           </div>
           <NavButton text={`More about ${name}`} link={link} />
         </div>
@@ -35,7 +35,7 @@ const OurScholars = () => {
       </HeaderImageWrapper>
 
       <main className="w-full text-justify">
-        <section className="max-w-5xl w-full mx-auto my-50 mt-14">
+        <section className="max-w-4xl w-full mx-auto my-50 mt-14">
           <SectionHeading text="OUR SCHOLARS" textColor="text-customGreen" />
           <p>
             We are currently funding <b>fourteen</b> Myanmar students, thirteen
@@ -43,7 +43,7 @@ const OurScholars = () => {
             university in Taiwan. Read their stories below.
           </p>
         </section>
-        <section className="max-w-5xl w-full mx-auto my-50 ">
+        <section className="max-w-4xl w-full mx-auto my-50 ">
           <Gallery />
         </section>
       </main>
