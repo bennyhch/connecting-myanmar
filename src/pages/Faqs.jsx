@@ -60,12 +60,13 @@ const Faqs = () => {
               The only additional fee is charged by the payment gateway as
               processing fee, but you can avoid this by choosing to donate via
               Bank Account Transfer to Connecting Myanmar’s Nanyang Commercial
-              Bank account. (<span className="font-semibold">
-                Acc. No.
-              </span>{" "}
-              043-472-0-051676-1;{" "}
-              <span className="font-semibold">Acc. Name:</span> Connecting
-              Myanmar Limited)
+              Bank account. (
+              <u>
+                <span className="font-semibold">Acc. No.</span>{" "}
+                043-472-0-051676-1;{" "}
+                <span className="font-semibold">Acc. Name:</span> Connecting
+                Myanmar Limited)
+              </u>
             </AnswerWrapper>
             <QuestionWrapper>
               Can I get tax deduction for my donation to CM?
@@ -121,8 +122,8 @@ const Faqs = () => {
               native communities after graduation.
               <br />
               <br />
-              You may also view the{" "}
-              <a href="/scholars" target="_blank">
+              You may also view the {/* TODO: refactor the url... */}
+              <a href="/connecting-myanmar/our-scholars" target="_blank">
                 <u>stories of our CM Scholars</u>
               </a>{" "}
               on our website.
@@ -200,6 +201,7 @@ const Faqs = () => {
               their original commitment period.
             </AnswerWrapper>
           </article>
+          <br />
           <NavButton link="/contact" text="CONTACT US" />
         </PageSectionWrapper>
       </PageContentWrapper>
