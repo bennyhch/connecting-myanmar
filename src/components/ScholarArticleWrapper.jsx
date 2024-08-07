@@ -4,7 +4,7 @@ import NavButton from "./NavButton";
 
 const ScholarArticleWrapper = ({ name, chart, children, highlight }) => {
   return (
-    <article className="w-full md:w-3/5 pr-14 pl-10">
+    <article className="w-full md:w-3/5 pr-14 pl-10 pb-5">
       <SectionHeading
         text={`${name.toUpperCase()}'S STORY`}
         textColor="text-customGold"
