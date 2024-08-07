@@ -29,39 +29,39 @@ import NaySoe from "./pages/scholars/NaySoe";
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/connecting-myanmar">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/scholarship" element={<Scholarship />} />
-          <Route path="/aid" element={<Aid />} />
-          <Route path="/donate" element={<Donate />} />
-          <Route path="/faqs" element={<Faqs />} />
+          <Route path="about" element={<About />} />
+          <Route path="scholarship" element={<Scholarship />} />
+          <Route path="aid" element={<Aid />} />
+          <Route path="donate" element={<Donate />} />
+          <Route path="faqs" element={<Faqs />} />
 
           {/* About */}
-          <Route path="/programmes" element={<Programmes />} />
-          <Route path="/structure" element={<Structure />} />
-          <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="programmes" element={<Programmes />} />
+          <Route path="structure" element={<Structure />} />
+          <Route path="contact-us" element={<ContactUs />} />
 
           {/* Scholarship */}
-          <Route path="/patrons" element={<Patrons />} />
-          <Route path="/our-scholars" element={<OurScholars />} />
+          <Route path="patrons" element={<Patrons />} />
+          <Route path="our-scholars" element={<OurScholars />} />
 
           {/* Scholars */}
-          <Route path="/dingo" element={<Dingo />} />
-          <Route path="/satkyar" element={<Satkyar />} />
-          <Route path="/blessing" element={<Blessing />} />
-          <Route path="/deeku" element={<Deeku />} />
-          <Route path="/naykawhtoo" element={<NayKawHtoo />} />
-          <Route path="/tony" element={<Tony />} />
-          <Route path="/naymin" element={<NayMin />} />
-          <Route path="/thanhtikezin" element={<ThanHtikeZin />} />
-          <Route path="/aunghtetoo" element={<AungHtetOo />} />
-          <Route path="/nyinyitun" element={<NyiNyiTun />} />
-          <Route path="/htinlinnzaw" element={<HtinLinZaw />} />
-          <Route path="/sawsiyar" element={<SawSiyar />} />
-          <Route path="/naysoe" element={<NaySoe />} />
+          <Route path="dingo" element={<Dingo />} />
+          <Route path="satkyar" element={<Satkyar />} />
+          <Route path="blessing" element={<Blessing />} />
+          <Route path="deeku" element={<Deeku />} />
+          <Route path="naykawhtoo" element={<NayKawHtoo />} />
+          <Route path="tony" element={<Tony />} />
+          <Route path="naymin" element={<NayMin />} />
+          <Route path="thanhtikezin" element={<ThanHtikeZin />} />
+          <Route path="aunghtetoo" element={<AungHtetOo />} />
+          <Route path="nyinyitun" element={<NyiNyiTun />} />
+          <Route path="htinlinnzaw" element={<HtinLinZaw />} />
+          <Route path="sawsiyar" element={<SawSiyar />} />
+          <Route path="naysoe" element={<NaySoe />} />
         </Route>
       </Routes>
     </BrowserRouter>
