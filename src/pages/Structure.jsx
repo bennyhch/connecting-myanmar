@@ -38,9 +38,11 @@ const Structure = () => {
           <p>
             If you would like to learn more about who we are and what we do, we
             encourage you to join our next gathering (to chat, eat, network -
-            super casual! :D). You may fill in the form at
-            https://forms.gle/UQa5F5tWVKiRwhSj7 and we will get in touch as soon
-            as we can!
+            super casual! :D). You may fill in the form at{" "}
+            <a href="https://forms.gle/UQa5F5tWVKiRwhSj7">
+              <u>https://forms.gle/UQa5F5tWVKiRwhSj7</u>
+            </a>{" "}
+            and we will get in touch as soon as we can!
           </p>
         </PageSectionWrapper>
       </PageContentWrapper>

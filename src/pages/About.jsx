@@ -1,4 +1,5 @@
 import React from "react";
+
 import { SectionHeading } from "../utils/wrappers";
 
 import HeaderImageWrapper from "../components/HeaderImage";
@@ -47,9 +48,8 @@ const About = () => {
             From there on sprang our School Construction programme, Playground
             Renovation programme,{" "}
             <span className="text-customGreen">
-              <a href="/programmes" target="_blank">
-                Street Law programme
-              </a>
+              {/* TODO: refactor the url...*/}
+              <a href="/connecting-myanmar/programmes">Street Law programme</a>
             </span>
             , Journalism Literacy programme, Medical programme and many more.
             Each year, University students from various disciplines through
@@ -64,9 +64,8 @@ const About = () => {
             began funding our first batch of Myanmar students to Universities
             abroad via our{" "}
             <span className="text-customGreen">
-              <a href="/scholarship" target="_blank">
-                Scholarship Scheme
-              </a>
+              {/* TODO: refactor the url...*/}
+              <a href="/connecting-myanmar/scholarship">Scholarship Scheme</a>
             </span>{" "}
             - many of which we got acquainted years ago in our summer programmes
             as participants or members of our local partnering organisations.

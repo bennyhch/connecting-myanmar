@@ -7,13 +7,13 @@ import { FaLinkedin } from "react-icons/fa";
 
 import NavButton from "../components/NavButton";
 import Divider from "../components/Divider";
-import RoundButton from "../components/RoundButton";
+import FooterButton from "../components/FooterButton";
 import HeaderImageWrapper from "../components/HeaderImage";
 
 import { SectionHeading } from "../utils/wrappers";
 import { shading50Styles } from "../utils/classStyles";
 
-const sectionWrapperStyles = "max-w-3xl w-full mx-auto my-50";
+const sectionWrapperStyles = "max-w-3xl w-full mx-auto";
 
 const buttonsContainerStyles =
   "mt-8 w-full flex gap-3 justify-around flex-wrap sm:w-1/2 sm:flex-row";
@@ -60,6 +60,7 @@ const Home = () => {
         <br />
         <br />
         <section className={sectionWrapperStyles}>
+          <br />
           <SectionHeading text="OUR MISSION" textColor="text-customGold" />
           <p className="mb-3">
             To inspire youth to think critically with an empathetic lens through
@@ -111,13 +112,13 @@ const Home = () => {
             </p>
 
             <div className={buttonsContainerStyles}>
-              <RoundButton
+              <FooterButton
                 link="https://www.artsy.net/partner/connecting-myanmar"
                 text="ARTSY"
                 color="bg-customGold"
                 newTab
               />
-              <RoundButton
+              <FooterButton
                 link="/donate"
                 text="DONATE NOW"
                 color="bg-customGreen"
