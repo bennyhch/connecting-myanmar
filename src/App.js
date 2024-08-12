@@ -25,11 +25,13 @@ import NyiNyiTun from "./pages/scholars/NyiNyiTun";
 import HtinLinZaw from "./pages/scholars/HtinLinZaw";
 import SawSiyar from "./pages/scholars/SawSiyar";
 import NaySoe from "./pages/scholars/NaySoe";
+import ScollToTop from "./components/ScollToTop";
 
 function App() {
   return (
     // <BrowserRouter basename="/connecting-myanmar">
     <BrowserRouter>
+      <ScollToTop />
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
