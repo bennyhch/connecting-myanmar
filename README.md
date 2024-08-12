@@ -3,7 +3,7 @@
 A non-profit organisation that aims to inspire and empower the youth in Myanmar.
 
 
-* Site in developement: https://bennyhch.github.io/connecting-myanmar/
+* Site in developement: https://lucent-meerkat-88adce.netlify.app/
 * Linkedin: https://www.linkedin.com/company/connectingmyanmar/
 * Instagram: https://www.instagram.com/connectingmyanmar
 * Facebook: https://www.facebook.com/ConnectingMyanmar/
