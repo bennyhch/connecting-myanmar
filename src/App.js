@@ -28,7 +28,8 @@ import NaySoe from "./pages/scholars/NaySoe";
 
 function App() {
   return (
-    <BrowserRouter basename="/connecting-myanmar">
+    // <BrowserRouter basename="/connecting-myanmar">
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />

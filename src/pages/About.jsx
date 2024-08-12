@@ -49,7 +49,8 @@ const About = () => {
             Renovation programme,{" "}
             <span className="text-customGreen">
               {/* TODO: refactor the url...*/}
-              <a href="/connecting-myanmar/programmes">Street Law programme</a>
+              {/* <a href="/connecting-myanmar/programmes">Street Law programme</a> */}
+              <a href="/programmes">Street Law programme</a>
             </span>
             , Journalism Literacy programme, Medical programme and many more.
             Each year, University students from various disciplines through
@@ -65,7 +66,8 @@ const About = () => {
             abroad via our{" "}
             <span className="text-customGreen">
               {/* TODO: refactor the url...*/}
-              <a href="/connecting-myanmar/scholarship">Scholarship Scheme</a>
+              {/* <a href="/connecting-myanmar/scholarship">Scholarship Scheme</a> */}
+              <a href="/scholarship">Scholarship Scheme</a>
             </span>{" "}
             - many of which we got acquainted years ago in our summer programmes
             as participants or members of our local partnering organisations.

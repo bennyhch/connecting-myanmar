@@ -123,7 +123,8 @@ const Faqs = () => {
               <br />
               <br />
               You may also view the {/* TODO: refactor the url... */}
-              <a href="/connecting-myanmar/our-scholars" target="_blank">
+              {/* <a href="/connecting-myanmar/our-scholars" target="_blank"> */}
+              <a href="/our-scholars" target="_blank">
                 <u>stories of our CM Scholars</u>
               </a>{" "}
               on our website.
