@@ -6,7 +6,7 @@ const headingBackgroundImageStyles =
   "absolute inset-0 h-full bg-cover bg-center text-black blur-sm";
 
 const headingTextStyles =
-  "text-xl leading-normal font-bold absolute text-white w-2/3 sm:w-1/2 md:w-1/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-2 sm:p-4";
+  "text-xl leading-normal font-bold absolute text-white w-2/3 sm:w-1/2 md:w-1/3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 p-2 sm:p-4 uppercase";
 
 const HeaderWrapper = ({ children }) => {
   return <header className="relative h-50lvh">{children}</header>;

@@ -68,7 +68,15 @@ code {
   flex: 1;
 }
 
-/* h3,
-p {
-  margin: 0;
-} */
+/*
+specific to donate page ...
+*/
+.donate p {
+  color: white;
+  font-weight: 100;
+}
+
+.donate h2 {
+  color: #a7d08b;
+  font-weight: 700;
+}
