@@ -63,8 +63,9 @@ const Donate = () => {
                   To learn more about our patron program, please go to{" "}
                   <u>
                     <i>
+                      {/* TODO: refactor the url...*/}
                       <a href="/connecting-myanmar/patrons" target="_blank">
-                        https://www.connectingmyanmar.org/becoming-a-patron.html.
+                        PATRONS.
                       </a>
                     </i>
                   </u>
