@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/connecting-myanmar/static/css/main.d47183a7.css",
-    "main.js": "/connecting-myanmar/static/js/main.a574fb06.js",
-    "static/js/453.68693753.chunk.js": "/connecting-myanmar/static/js/453.68693753.chunk.js",
+    "main.css": "/connecting-myanmar/static/css/main.35e45f51.css",
+    "main.js": "/connecting-myanmar/static/js/main.b4c4fbf1.js",
     "static/media/footer.jpg": "/connecting-myanmar/static/media/footer.aaea03a495d6a4c6210d.jpg",
     "static/media/programmes.jpg": "/connecting-myanmar/static/media/programmes.952d41b1a2b68b3cfd9e.jpg",
     "static/media/home-intro.jpg": "/connecting-myanmar/static/media/home-intro.8e1846e0f81412f225b8.jpg",
@@ -74,12 +73,11 @@
     "static/media/naymin2.jpg": "/connecting-myanmar/static/media/naymin2.06ec8bd4d41c4d91d777.jpg",
     "static/media/nyi1.jpg": "/connecting-myanmar/static/media/nyi1.c0d7d101779805bc9456.jpg",
     "index.html": "/connecting-myanmar/index.html",
-    "main.d47183a7.css.map": "/connecting-myanmar/static/css/main.d47183a7.css.map",
-    "main.a574fb06.js.map": "/connecting-myanmar/static/js/main.a574fb06.js.map",
-    "453.68693753.chunk.js.map": "/connecting-myanmar/static/js/453.68693753.chunk.js.map"
+    "main.35e45f51.css.map": "/connecting-myanmar/static/css/main.35e45f51.css.map",
+    "main.b4c4fbf1.js.map": "/connecting-myanmar/static/js/main.b4c4fbf1.js.map"
   },
   "entrypoints": [
-    "static/css/main.d47183a7.css",
-    "static/js/main.a574fb06.js"
+    "static/css/main.35e45f51.css",
+    "static/js/main.b4c4fbf1.js"
   ]
 }
