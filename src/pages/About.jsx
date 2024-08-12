@@ -6,6 +6,7 @@ import HeaderImageWrapper from "../components/HeaderImage";
 import PageContentWrapper, {
   PageSectionWrapper,
 } from "../components/PageContentWrapper";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -50,7 +51,7 @@ const About = () => {
             <span className="text-customGreen">
               {/* TODO: refactor the url...*/}
               {/* <a href="/connecting-myanmar/programmes">Street Law programme</a> */}
-              <a href="/programmes">Street Law programme</a>
+              <Link to="/programmes">Street Law programme</Link>
             </span>
             , Journalism Literacy programme, Medical programme and many more.
             Each year, University students from various disciplines through
@@ -67,7 +68,7 @@ const About = () => {
             <span className="text-customGreen">
               {/* TODO: refactor the url...*/}
               {/* <a href="/connecting-myanmar/scholarship">Scholarship Scheme</a> */}
-              <a href="/scholarship">Scholarship Scheme</a>
+              <Link to="/scholarship">Scholarship Scheme</Link>
             </span>{" "}
             - many of which we got acquainted years ago in our summer programmes
             as participants or members of our local partnering organisations.

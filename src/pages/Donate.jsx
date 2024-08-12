@@ -3,6 +3,7 @@ import React from "react";
 import HeaderImageWrapper from "../components/HeaderImage";
 import PageContentWrapper from "../components/PageContentWrapper";
 import FooterButton from "../components/FooterButton";
+import { Link } from "react-router-dom";
 
 const TextContainer = ({ children, title }) => {
   return (
@@ -15,7 +16,10 @@ const TextContainer = ({ children, title }) => {
 
 const ImageContainer = ({ children }) => {
   return (
-    <div className="flex-1 basis-full md:basis-1/2 flex justify-center">
+    <div
+      style={{ border: "1px solid red" }}
+      className="flex-1 basis-full md:basis-1/2 flex justify-center"
+    >
       {children}
     </div>
   );
@@ -40,7 +44,11 @@ const Donate = () => {
             <br />
             <article className="flex flex-wrap">
               <ImageContainer>
-                <h1>Image container</h1>
+                <h1>
+                  Connecting Myanmar is a charitable organization registered in
+                  Hong Kong and your contributions are tax-deductible in Hong
+                  Kong.
+                </h1>
               </ImageContainer>
               <TextContainer>
                 <h1 className="text-customGreen font-bold text-xl">
@@ -64,9 +72,9 @@ const Donate = () => {
                   <u>
                     <i>
                       {/* TODO: refactor the url...*/}
-                      <a href="/connecting-myanmar/patrons" target="_blank">
+                      <Link to="/patrons" target="_blank">
                         PATRONS.
-                      </a>
+                      </Link>
                     </i>
                   </u>
                 </p>

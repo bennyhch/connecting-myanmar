@@ -4,6 +4,7 @@ import NavButton from "../components/NavButton";
 import PageContentWrapper, {
   PageSectionWrapper,
 } from "../components/PageContentWrapper";
+import { Link } from "react-router-dom";
 
 const QuestionWrapper = ({ children }) => (
   <>
@@ -124,9 +125,9 @@ const Faqs = () => {
               <br />
               You may also view the {/* TODO: refactor the url... */}
               {/* <a href="/connecting-myanmar/our-scholars" target="_blank"> */}
-              <a href="/our-scholars" target="_blank">
+              <Link href="/our-scholars" target="_blank">
                 <u>stories of our CM Scholars</u>
-              </a>{" "}
+              </Link>{" "}
               on our website.
             </AnswerWrapper>
             <QuestionWrapper>
