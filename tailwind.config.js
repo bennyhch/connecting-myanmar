@@ -18,6 +18,7 @@ module.exports = {
         customGold: "#b08c2c",
         customGreen: "#70bc3c",
         customBrown: "#8D5024",
+        customGrey: "#403434", // used as a background for donate page
       },
     },
   },
