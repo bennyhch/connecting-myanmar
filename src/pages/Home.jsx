@@ -1,14 +1,10 @@
 import React from "react";
 
-import { FaFacebook } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
-import { FaLinkedin } from "react-icons/fa";
-
 import NavButton from "../components/NavButton";
 import Divider from "../components/Divider";
 import FooterButton from "../components/FooterButton";
 import HeaderImageWrapper from "../components/HeaderImage";
+import IconLink, { socialMediaIconsData } from "../components/IconLink";
 
 import { SectionHeading } from "../utils/wrappers";
 import { shading50Styles } from "../utils/classStyles";
@@ -17,34 +13,6 @@ const sectionWrapperStyles = "max-w-3xl w-full mx-auto";
 
 const buttonsContainerStyles =
   "mt-8 w-full flex gap-3 justify-around flex-wrap sm:w-1/2 sm:flex-row";
-const iconStyles = "text-2xl transition-transform transform hover:scale-125";
-
-const iconsData = [
-  {
-    link: "https://www.facebook.com/ConnectingMyanmar/",
-    icon: <FaFacebook className={iconStyles} />,
-  },
-  {
-    link: "https://www.instagram.com/connectingmyanmar",
-    icon: <FaInstagram className={iconStyles} />,
-  },
-  {
-    link: "https://www.linkedin.com/in/connectingmyanmar/",
-    icon: <FaLinkedin className={iconStyles} />,
-  },
-  {
-    link: "mailto: info@connectingmyanmar.org",
-    icon: <AiOutlineMail className={iconStyles} />,
-  },
-];
-
-const IconLink = ({ link, icon }) => {
-  return (
-    <a href={link} target="_blank" rel="noreferrer">
-      {icon}
-    </a>
-  );
-};
 
 const Home = () => {
   return (
@@ -126,7 +94,7 @@ const Home = () => {
             </div>
 
             <div className={buttonsContainerStyles}>
-              {iconsData.map((data, index) => (
+              {socialMediaIconsData.map((data, index) => (
                 <IconLink key={index} link={data.link} icon={data.icon} />
               ))}
             </div>

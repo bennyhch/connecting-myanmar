@@ -1,39 +1,10 @@
 import React from "react";
+
 import HeaderImageWrapper from "../components/HeaderImage";
 import PageContentWrapper, {
   PageSectionWrapper,
 } from "../components/PageContentWrapper";
-import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { AiOutlineMail } from "react-icons/ai";
-
-const iconStyles = "text-2xl transition-transform transform hover:scale-125";
-
-const iconsData = [
-  {
-    link: "https://www.facebook.com/ConnectingMyanmar/",
-    icon: <FaFacebook className={iconStyles} />,
-  },
-  {
-    link: "https://www.instagram.com/connectingmyanmar",
-    icon: <FaInstagram className={iconStyles} />,
-  },
-  {
-    link: "https://www.linkedin.com/in/connectingmyanmar/",
-    icon: <FaLinkedin className={iconStyles} />,
-  },
-  {
-    link: "mailto: info@connectingmyanmar.org",
-    icon: <AiOutlineMail className={iconStyles} />,
-  },
-];
-
-const IconLink = ({ link, icon }) => {
-  return (
-    <a href={link} target="_blank" rel="noreferrer">
-      {icon}
-    </a>
-  );
-};
+import IconLink, { socialMediaIconsData } from "../components/IconLink";
 
 const ContactUs = () => {
   return (
@@ -62,7 +33,7 @@ const ContactUs = () => {
           </p>
           <br />
           <div className="flex justify-center items-center gap-4">
-            {iconsData.map((iconData, index) => (
+            {socialMediaIconsData.map((iconData, index) => (
               <IconLink key={index} {...iconData} />
             ))}
           </div>
