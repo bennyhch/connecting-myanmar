@@ -36,8 +36,8 @@ const ContactUs = () => {
     // add alert in the UI here to notify user of successful submission
 
     const formData = {
-      name: form.current["name"].value,
-      email: form.current["email"].value,
+      name: form.current["user_name"].value,
+      email: form.current["user_email"].value,
       message: form.current["message"].value,
     };
 

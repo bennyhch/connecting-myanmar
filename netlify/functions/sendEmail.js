@@ -16,8 +16,8 @@ exports.handler = async function (event, context) {
 
     // Construct the email params
     const templateParams = {
-      from_name: name,
-      from_email: email,
+      user_name: name,
+      user_email: email,
       message: message,
     };
 
