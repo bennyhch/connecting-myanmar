@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 
 import HeaderImageWrapper from "../components/HeaderImage";
 import PageContentWrapper, {
@@ -9,27 +9,60 @@ import PageContentWrapper, {
 import { SectionHeading } from "../utils/wrappers";
 
 const ContactUs = () => {
-  const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-  const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
-  const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY;
+  // const SERVICE_ID = process.env.REACT_APP_SERVICE_ID || process.env.SERVICE_ID;
+  // const TEMPLATE_ID =
+  //   process.env.REACT_APP_TEMPLATE_ID || process.env.TEMPLATE_ID;
+  // const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY || process.env.PUBLIC_KEY;
 
   const form = useRef();
-  const handleSubmit = (e) => {
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-        publicKey: PUBLIC_KEY,
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          e.target.reset();
-          // add alert in the UI here to notify user of successful submission
+
+    // emailjs
+    //   .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
+    //     publicKey: PUBLIC_KEY,
+    //   })
+    //   .then(
+    //     () => {
+    //       console.log("SUCCESS!");
+    //       e.target.reset();
+    //       // add alert in the UI here to notify user of successful submission
+    //     },
+    //     (error) => {
+    //       console.log("FAILED...", error.text);
+    //     }
+    //   );
+    // add alert in the UI here to notify user of successful submission
+
+    const formData = {
+      name: form.current["name"].value,
+      email: form.current["email"].value,
+      message: form.current["message"].value,
+    };
+
+    try {
+      const resp = await fetch("/.netlify/functions/sendEmail", {
+        method: "POST",
+        body: JSON.stringify(formData),
+        headers: {
+          "Content-Type": "application/json",
         },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
+      });
+
+      if (resp.ok) {
+        const result = await resp.json();
+
+        console.log("SUCCESS!");
+        console.log("result.message", result.message);
+        // set some state here?
+        form.current.reset();
+      } else {
+        // set some state here?
+      }
+    } catch (error) {
+      console.log("Error:", error);
+    }
   };
 
   return (
