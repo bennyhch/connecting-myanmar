@@ -1,108 +1,71 @@
-import React, { useRef } from "react";
-// import emailjs from "@emailjs/browser";
-
+import React from "react";
 import HeaderImageWrapper from "../components/HeaderImage";
 import PageContentWrapper, {
   PageSectionWrapper,
 } from "../components/PageContentWrapper";
+import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
 
-import { SectionHeading } from "../utils/wrappers";
+const iconStyles = "text-2xl transition-transform transform hover:scale-125";
+
+const iconsData = [
+  {
+    link: "https://www.facebook.com/ConnectingMyanmar/",
+    icon: <FaFacebook className={iconStyles} />,
+  },
+  {
+    link: "https://www.instagram.com/connectingmyanmar",
+    icon: <FaInstagram className={iconStyles} />,
+  },
+  {
+    link: "https://www.linkedin.com/in/connectingmyanmar/",
+    icon: <FaLinkedin className={iconStyles} />,
+  },
+  {
+    link: "mailto: info@connectingmyanmar.org",
+    icon: <AiOutlineMail className={iconStyles} />,
+  },
+];
+
+const IconLink = ({ link, icon }) => {
+  return (
+    <a href={link} target="_blank" rel="noreferrer">
+      {icon}
+    </a>
+  );
+};
 
 const ContactUs = () => {
-  // const SERVICE_ID = process.env.REACT_APP_SERVICE_ID || process.env.SERVICE_ID;
-  // const TEMPLATE_ID =
-  //   process.env.REACT_APP_TEMPLATE_ID || process.env.TEMPLATE_ID;
-  // const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY || process.env.PUBLIC_KEY;
-
-  const form = useRef();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // emailjs
-    //   .sendForm(SERVICE_ID, TEMPLATE_ID, form.current, {
-    //     publicKey: PUBLIC_KEY,
-    //   })
-    //   .then(
-    //     () => {
-    //       console.log("SUCCESS!");
-    //       e.target.reset();
-    //       // add alert in the UI here to notify user of successful submission
-    //     },
-    //     (error) => {
-    //       console.log("FAILED...", error.text);
-    //     }
-    //   );
-    // add alert in the UI here to notify user of successful submission
-
-    const formData = {
-      name: form.current["user_name"].value,
-      email: form.current["user_email"].value,
-      message: form.current["message"].value,
-    };
-
-    try {
-      const resp = await fetch("/.netlify/functions/sendEmail", {
-        method: "POST",
-        body: JSON.stringify(formData),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-
-      if (resp.ok) {
-        const result = await resp.json();
-
-        console.log("SUCCESS!");
-        console.log("result.message", result.message);
-        // set some state here?
-        form.current.reset();
-      } else {
-        // set some state here?
-      }
-    } catch (error) {
-      console.log("Error:", error);
-    }
-  };
-
   return (
     <div>
       <HeaderImageWrapper imgUrl="bg-[url('/src/assets/ourScholars.jpg')]" />
 
       <PageContentWrapper>
         <PageSectionWrapper isTopSection>
-          <SectionHeading text="CONTACT US" textColor="text-customGold" />
-
-          <form ref={form} onSubmit={handleSubmit}>
-            <input
-              required
-              name="user_name"
-              type="text"
-              placeholder="Name"
-              className="w-full rounded-md py-3 px-4 text-gray-800 bg-gray-100 focus:bg-transparent text-sm outline-blue-500 mb-5"
-            />
-            <input
-              required
-              name="user_email"
-              type="email"
-              placeholder="Email"
-              className="w-full rounded-md py-3 px-4 text-gray-800 bg-gray-100 focus:bg-transparent text-sm outline-blue-500 mb-5"
-            />
-            <textarea
-              required
-              name="message"
-              placeholder="Message"
-              rows="6"
-              className="w-full rounded-md px-4 text-gray-800 bg-gray-100 focus:bg-transparent text-sm pt-3 outline-blue-500 mb-5"
-            ></textarea>
-
-            <button
-              type="submit"
-              className="text-white bg-blue-500 hover:bg-blue-600 tracking-wide rounded-md text-sm px-4 py-3 w-full"
-            >
-              Send
-            </button>
-          </form>
+          <h1 className="text-center text-4xl font-bold">Get in touch</h1>
+          <br />
+          <br />
+          <p className="text-center text-lg">
+            We love hearing from people, and are keen for people to reach out to
+            us with any questions or feedbacks!
+          </p>
+          <p className="text-center text-lg font-light">
+            Email us at{" "}
+            <a href="mailto:info@connectingmyanmar.org" className="underline">
+              info@connectingmyanmar.org
+            </a>{" "}
+          </p>
+          <br />
+          <br />
+          <p className="text-center text-lg">
+            Follow us on social media for the latest updates!
+          </p>
+          <br />
+          <div className="flex justify-center items-center gap-4">
+            {iconsData.map((iconData, index) => (
+              <IconLink key={index} {...iconData} />
+            ))}
+          </div>
         </PageSectionWrapper>
       </PageContentWrapper>
     </div>
