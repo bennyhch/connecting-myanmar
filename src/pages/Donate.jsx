@@ -1,25 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import HeaderImageWrapper from "../components/HeaderImage";
 import PageContentWrapper from "../components/PageContentWrapper";
 import FooterButton from "../components/FooterButton";
-import { Link } from "react-router-dom";
+import DonorboxForm from "../components/DonorboxForm";
 
 const TextContainer = ({ children, title }) => {
   return (
-    <div className="flex-1 basis-full md:basis-1/2 ">
+    <div className="flex-1 basis-full md:basis-1/2 pl-4">
       <h3 className="text-customGold">{title}</h3>
       {children}
     </div>
   );
 };
 
-const ImageContainer = ({ children }) => {
+const FormContainer = ({ children }) => {
   return (
-    <div
-      style={{ border: "1px solid red" }}
-      className="flex-1 basis-full md:basis-1/2 flex justify-center"
-    >
+    <div className="flex-1 basis-full md:basis-1/2 flex justify-center">
       {children}
     </div>
   );
@@ -43,13 +41,9 @@ const Donate = () => {
             <br />
             <br />
             <article className="flex flex-wrap">
-              <ImageContainer>
-                <h1>
-                  Connecting Myanmar is a charitable organization registered in
-                  Hong Kong and your contributions are tax-deductible in Hong
-                  Kong.
-                </h1>
-              </ImageContainer>
+              <FormContainer>
+                <DonorboxForm />
+              </FormContainer>
               <TextContainer>
                 <h1 className="text-customGreen font-bold text-xl">
                   YOUR SUPPORT
@@ -115,6 +109,15 @@ const Donate = () => {
                   newTab
                   color="bg-customGreen"
                 />
+
+                <br />
+                <br />
+                <p className="text-xs italic">
+                  {" "}
+                  &#9733; Connecting Myanmar is a charitable organization
+                  registered in Hong Kong and your contributions are
+                  tax-deductible in Hong Kong.
+                </p>
               </TextContainer>
             </article>
           </section>
