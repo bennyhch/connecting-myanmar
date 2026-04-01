@@ -1,24 +1,24 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+export default {
+  content: ['./index.html', './src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     extend: {
       fontFamily: {
-        actor: ["Actor", "sans-serif"],
-        ubuntu: ["Ubuntu", "sans-serif"],
+        actor: ['Actor', 'sans-serif'],
+        ubuntu: ['Ubuntu', 'sans-serif'],
       },
       backgroundImage: {
-        "home-intro": "url('/src/assets/home-intro.jpg')",
+        'home-intro': "url('/src/assets/home-intro.jpg')",
       },
       height: {
-        "50lvh": "50lvh",
-        "70lvh": "70lvh", // TODO: Remove this if not used
+        '50lvh': '50lvh',
+        '70lvh': '70lvh',
       },
       colors: {
-        customGold: "#b08c2c",
-        customGreen: "#70bc3c",
-        customBrown: "#8D5024",
-        customGrey: "#403434", // used as a background for donate page
+        customGold: '#b08c2c',
+        customGreen: '#70bc3c',
+        customBrown: '#8D5024',
+        customGrey: '#403434',
       },
     },
   },
